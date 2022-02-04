@@ -6,7 +6,7 @@ const siteMetadata = {
     icon: `/images/icon.svg`,
     titleImage: ``,
     ogImage: `/images/cover.jpg`,
-    twoColumnWall: false,
+    twoColumnWall: true,
     cookiePolicy: false,
     introTag: `Collect, aggregate, and visualize a data ecosystem's metadata`,
     author: `@marquezproject`,

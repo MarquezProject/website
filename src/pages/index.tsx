@@ -122,12 +122,7 @@ const Wall = ({ data }) => {
                         data.capitalizeTitleOnHome ? "uppercase" : ""
                     }`}
                 >
-                    <span></span>
-                    <img
-                        src="/images/logo.svg"
-                        alt=""
-                        className="w-full max-w-none lg:h-auto pt-24 mb-6"
-                    />
+                    <span>Meet Marquez</span>
                 </h1>
             </div>
             <p className="text-lg lg:text-xl text-color-3 pt-9 pb-24">
@@ -139,16 +134,17 @@ const Wall = ({ data }) => {
     if (twoColumnWall) {
         return (
             <div
-                className="wall h-screen flex relative justify-center items-center overflow-hidden"
+                className="wall flex relative justify-center items-center overflow-hidden pt-24 pb-16"
                 ref={wall}
             >
                 <div className="flex-1 lg:block absolute lg:relative w-full h-full top-0 left-0">
-                    <div
-                        className="absolute left-0 top-0 w-full h-full lg:hidden"
-                        style={{
-                            background: "rgba(0,0,0,.75)",
-                        }}
-                    ></div>
+                    <div className="w-full h-full">
+                        <img
+                            src="/images/screenshot.svg"
+                            alt=""
+                            className="h-full w-auto max-w-none lg:h-auto lg:w-full px-12"
+                        />
+                    </div>
                     <img
                         src={data.titleImage}
                         alt=""
