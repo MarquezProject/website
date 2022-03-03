@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { Link } from "gatsby"
 
@@ -31,40 +31,65 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
         >
             <Wall data={siteData} />
             <About  />
+            <FeatureBoxes />
             <Blog>{blogList}</Blog>
         </Layout>
     )
 }
 
+const Wall = ({ data }) => {
+    return (
+        <div
+            className="wall flex relative justify-center items-center overflow-hidden pt-24 pb-16 px-16"
+        >
+            <div className="flex-1 lg:block relative w-full h-full top-0 left-0 hidden">
+                <div className="w-full h-full">
+                    <img
+                        src="/images/screenshot.svg"
+                        alt=""
+                        className="h-full w-auto max-w-none lg:h-auto lg:w-full pr-12"
+                    />
+                </div>
+            </div>
+            <div className="flex-1 text-center p-3 relative z-10 lg:text-left lg:pl-8 text-white lg:text-color-default">
+                    <div className="title">
+                        <h1
+                            className="text-5xl relative mt-20 lg:text-6xl"
+                        >
+                            <span>Graph your entire data ecosystem</span>
+                        </h1>
+                    </div>
+                    <p className="text-lg lg:text-xl text-color-3 pt-9 pb-24">
+                        Use Marquez to collect, aggregate, and visualize metadata about your data pipelines and applications.
+                    </p>
+                </div>
+        </div>
+    )
+}
+
 const About = ({ }) => {
-    let spanAttrs: Partial<{ style: unknown }> = {}
-
-    spanAttrs.style = {
-        margin: '0 auto',
-    }
-
     return (
         <div className="boxed">
             <div className="px-4 py-12 text-center lg:py-14 lg:px-0">
-                {/* <h2 className="text-color-1 text-3xl lg:text-4xl">
-                    Overview
-                </h2> */}
-                <p className="mt-5 text-lg py-3">
-                    Marquez is an open source metadata service for the <strong>collection</strong>, <strong>aggregation</strong>, and <strong>visualization</strong> of a data ecosystem's metadata. It maintains the <a href="https://en.wikipedia.org/wiki/Provenance#Data_provenance">provenance</a> of how datasets are consumed and produced, provides global visibility into job runtime and frequency of dataset access, centralization of dataset lifecycle management, and much more. Marquez was released and open sourced by <a href="https://www.wework.com">WeWork</a>.
+                <p className="mt-5 text-lg pt-3 px-6">
+                    Marquez is an open source metadata service. It maintains <a href="https://en.wikipedia.org/wiki/Provenance#Data_provenance">data provenance</a>, shows how datasets are consumed and produced, provides global visibility into job runtimes, centralizes dataset lifecycle management, and much more.
+                </p>
+                <p className="mt-5 text-lg pb-3 px-6">
+                    Marquez was released and open sourced by <a href="https://www.wework.com">WeWork</a>.
                 </p>
                 <span className="py-5">
-                    <Button
-                        title="GitHub"
-                        to='https://github.com/OpenLineage/OpenLineage'
-                        type="extbutton"
-                        iconRight={<GitHub />}
-                        className="mx-5 rounded-full"
-                    />
                     <Button
                         title="Quickstart"
                         to='/quickstart'
                         type="link"
                         iconRight={<ArrowRight />}
+                        className="mx-5 rounded-full"
+                    />
+                    <Button
+                        title="GitHub"
+                        to='https://github.com/OpenLineage/OpenLineage'
+                        type="extbutton"
+                        iconRight={<GitHub />}
                         className="mx-5 rounded-full"
                     />
                     <Button
@@ -80,104 +105,81 @@ const About = ({ }) => {
     )
 }
 
-const Wall = ({ data }) => {
-    const wall = useRef(null)
 
-    const twoColumnWall = data.twoColumnWall
-
-    const [state, changeState] = useState({
-        loaded: false,
-        supportsBlend: false,
-    })
-
-    useEffect(() => {
-        if (window.CSS && !state.loaded) {
-            if (CSS.supports("mix-blend-mode", "screen")) {
-                wall.current.classList.add("supports-blend")
-                changeState({
-                    loaded: true,
-                    supportsBlend: true,
-                })
-            }
-        }
-    }, [state.loaded])
-
-    let spanAttrs: Partial<{ style: unknown }> = {}
-
-    if (!twoColumnWall && data.titleImage) {
-        spanAttrs.style = {
-            backgroundImage: `url('${data.titleImage}')`,
-            height: '35em',
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-        }
-    }
-
-    const innerComponents = (
-        <React.Fragment>
-            <div className="title">
-                <h1
-                    className={`text-6xl relative mt-20 lg:text-7xl ${
-                        data.capitalizeTitleOnHome ? "uppercase" : ""
-                    }`}
-                >
-                    <span>Meet Marquez</span>
-                </h1>
-            </div>
-            <p className="text-lg lg:text-xl text-color-3 pt-9 pb-24">
-                {data.introTag}
-            </p>
-        </React.Fragment>
-    )
-
-    if (twoColumnWall) {
-        return (
-            <div
-                className="wall flex relative justify-center items-center overflow-hidden pt-24 pb-16"
-                ref={wall}
-            >
-                <div className="flex-1 lg:block absolute lg:relative w-full h-full top-0 left-0">
-                    <div className="w-full h-full">
-                        <img
-                            src="/images/screenshot.svg"
-                            alt=""
-                            className="h-full w-auto max-w-none lg:h-auto lg:w-full px-12"
-                        />
-                    </div>
+const FeatureBoxes = ({ }) => {
+    return (
+        <div className="border-t-2 border-dashed border-color-2">
+            <div className="flex flex-wrap py-12 container mx-auto items-center">
+                <div className="py-12 lg:py-14 px-4 lg:pr-12 lg:w-1/2 w-full order-0 lg:order-0">
+                    <h3 className="text-color-1 text-xl lg:text-2xl">
+                        Real-time metadata collection
+                    </h3>
+                    <p className="mt-5">
+                        Marquez is a metadata server, offering an OpenLineage-compatible endpoint for real-time collection of information from running jobs and applications.
+                    </p>
+                    <p className="mt-5">
+                        As the reference implementation of OpenLineage, the Marquez API server already works with all of its integrations developed by the community. This includes Apache Airflow, Apache Spark, dbt, Dagster, and Great Expectations. 
+                    </p>
+                </div>
+                <div className="py-12 lg:py-14 px-4 lg:w-1/2 w-full order-1 lg:order-1">
                     <img
-                        src={data.titleImage}
+                        src="/images/feature-1.svg"
                         alt=""
-                        className="h-full w-auto max-w-none lg:h-auto lg:w-full"
+                        className="w-full max-w-none"
                     />
                 </div>
-                <div className="flex-1 text-center p-3 relative z-10 lg:text-left lg:pl-8 text-white lg:text-color-default">
-                    {innerComponents}
+                <div className="py-12 lg:py-14 px-4 lg:pl-12 lg:w-1/2 w-full order-2 lg:order-3">
+                    <h3 className="text-color-1 text-xl lg:text-2xl">
+                        Unified visual graph
+                    </h3>
+                    <p className="mt-5">
+                        Through a web user interface, Marquez can provide a visual map that shows <strong>complex interdependencies</strong> within your data ecosystem.
+                    </p>
+                    <p className="mt-5">
+                        The user interface allows you to browse the metadata within Marquez, making it easy to see the inputs and outputs of each job, trace the lineage of individual datasets, and study performance metrics and execution details.
+                    </p>
+                </div> 
+                <div className="py-12 lg:py-14 px-4 lg:w-1/2 w-full order-3 lg:order-2">
+                    <img
+                        src="/images/feature-2.svg"
+                        alt=""
+                        className="w-full max-w-none lg:pr-12"
+                    />
+                </div>
+                <div className="py-12 lg:py-14 px-4 lg:pr-12 lg:w-1/2 w-full order-4 lg:order-4">
+                    <h3 className="text-color-1 text-xl lg:text-2xl">
+                        Flexible Lineage API
+                    </h3>
+                    <p className="mt-5">
+                        Lineage metadata can be queried using the lineage API, allowing for automation of key tasks like backfills and root cause analysis.
+                    </p>
+                    <p className="mt-5">
+                        With the Lineage API, you can easily traverse the dependency tree and establish context for datasets across multiple pipelines and orchestration platforms. This can be used to enrich data catalogs and data quality systems.
+                    </p>
+                </div>
+                <div className="py-12 lg:py-14 px-4 lg:w-1/2 w-full order-5 lg:order-5">
+                    <img
+                        src="/images/feature-3.svg"
+                        alt=""
+                        className="w-full max-w-none"
+                    />
                 </div>
             </div>
-        )
-    }
-
-    return (
-        <div
-            className="wall flex flex-col justify-center items-center text-center"
-            {...spanAttrs}
-            ref={wall}
-        >
-            {innerComponents}
         </div>
     )
 }
 
 const Blog = ({ children }) => {
     return (
-        <div className="container mx-auto px-0 pb-40">
-            <div className="px-4 py-12 text-center lg:py-14 lg:px-0">
-                <h2 className="text-color-1 text-3xl lg:text-4xl">
-                    Latest News
-                </h2>
+        <div className="border-t-2 border-dashed border-color-2">
+            <div className="container mx-auto px-0 pb-24">
+                <div className="px-4 py-12 text-center lg:py-14 lg:px-0">
+                    <h2 className="text-color-1 text-3xl lg:text-4xl">
+                        Latest News
+                    </h2>
+                </div>
+                <div className="flex flex-wrap">{children}</div>
             </div>
-            <div className="flex flex-wrap">{children}</div>
         </div>
     )
 }

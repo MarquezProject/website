@@ -26,7 +26,9 @@ const Logo = ({ className = "logo" }) => {
 
 const Link = props => {
     if (props.to) {
-        if (props.to.startsWith("/")) {
+        const internal = /^\/(?!\/)/.test(props.to)
+
+        if (internal) {
             return <GatsbyLink {...props}>{props.children}</GatsbyLink>
         }
 

@@ -28,14 +28,14 @@ export default function() {
         <footer className="footer bg-bgalt py-12">
             <div className="container mx-auto text-center">
                 <div
-                    className="text-color-2 my-3"
+                    className="text-color-1 my-3"
                 >
                     <ul>
                     {footerLinks} 
                     </ul>
                 </div>
                 <p className="text-color-default text-lg">
-                    Copyright &copy; {new Date().getFullYear()} The Linux Foundation®. All rights reserved.      
+                    Copyright &copy; {new Date().getFullYear()} The Linux Foundation<sup>®</sup>. All rights reserved.      
                 </p>
             </div>
         </footer>

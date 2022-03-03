@@ -12,7 +12,7 @@
 
 body {
     font-family: "Karla", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 p {
@@ -64,6 +64,8 @@ p {
 .nav .line {
     width: 0;
     transition: width 0.50s;
+    border-bottom: 2px dashed;
+    @apply border-color-2;
 }
 
 .nav.scrolled .line{
@@ -176,7 +178,7 @@ p {
 }
 
 .post-content h1, h2, h3, h4, h5, h6 {
-    @apply text-color-2 my-8;
+    @apply text-color-1 my-8;
 }
 
 .post-content h1 {
