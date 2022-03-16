@@ -52,32 +52,17 @@ const Wall = ({ data }) => {
                 </div>
             </div>
             <div className="flex-1 text-center p-3 relative z-10 lg:text-left lg:pl-8 text-white lg:text-color-default">
-                    <div className="title">
-                        <h1
-                            className="text-5xl relative mt-20 lg:text-6xl"
-                        >
-                            <span>Graph your entire data ecosystem</span>
-                        </h1>
-                    </div>
-                    <p className="text-lg lg:text-xl text-color-3 pt-9 pb-24">
-                        Use Marquez to collect, aggregate, and visualize metadata about your data pipelines and applications.
-                    </p>
+                <div className="title">
+                    <h1
+                        className="text-5xl relative mt-20 lg:text-6xl"
+                    >
+                        <span>Data lineage made easy</span>
+                    </h1>
                 </div>
-        </div>
-    )
-}
-
-const About = ({ }) => {
-    return (
-        <div className="border-t-2 border-dashed border-color-2" >
-            <div className="px-4 py-12 boxed text-center lg:py-14 lg:px-0">
-                <p className="mt-5 text-lg pt-3 px-6">
-                    Marquez is an open source metadata service. It maintains <a href="https://en.wikipedia.org/wiki/Provenance#Data_provenance">data provenance</a>, shows how datasets are consumed and produced, provides global visibility into job runtimes, centralizes dataset lifecycle management, and much more.
+                <p className="text-lg lg:text-xl text-color-3 pt-9 pb-9">
+                    Use Marquez to collect, aggregate, and visualize metadata about your data pipelines and applications.
                 </p>
-                <p className="mt-5 text-lg pb-3 px-6">
-                    Marquez was released and open sourced by <a href="https://www.wework.com">WeWork</a>.
-                </p>
-                <span className="py-5">
+                <span className="py-5 pb-24">
                     <Button
                         title="Quickstart"
                         to='/quickstart'
@@ -105,65 +90,82 @@ const About = ({ }) => {
     )
 }
 
+const About = ({ }) => {
+    return (
+        <div className="border-t-2 border-dashed border-color-2" >
+            <div className="px-4 py-12 boxed text-center lg:py-14 lg:px-0">
+                <h2 className="text-2xl relative lg:text-3xl">
+                    <span>What is Marquez?</span>
+                </h2>
+
+                <p className="mt-5 text-lg pt-3 px-6">
+                    Marquez is an open source metadata service. It maintains <a href="https://en.wikipedia.org/wiki/Provenance#Data_provenance">data provenance</a>, shows how datasets are consumed and produced, provides global visibility into job runtimes, centralizes dataset lifecycle management, and much more.
+                </p>
+                <p className="mt-5 text-lg px-6">
+                    Marquez was released and open sourced by <a href="https://www.wework.com">WeWork</a>.
+                </p>
+            </div>
+        </div>
+    )
+}
+
 
 const FeatureBoxes = ({ }) => {
     return (
-        <div className="border-t-2 border-dashed border-color-2">
-            <div className="flex flex-wrap py-12 container mx-auto items-center">
-                <div className="py-12 lg:py-14 px-4 lg:pr-12 lg:w-1/2 w-full order-0 lg:order-0">
-                    <h3 className="text-color-1 text-xl lg:text-2xl">
-                        Real-time metadata collection
-                    </h3>
-                    <p className="mt-5">
-                        Marquez is a metadata server, offering an OpenLineage-compatible endpoint for real-time collection of information from running jobs and applications.
-                    </p>
-                    <p className="mt-5">
-                        As the reference implementation of OpenLineage, the Marquez API server already works with all of its integrations developed by the community. This includes Apache Airflow, Apache Spark, dbt, Dagster, and Great Expectations. 
-                    </p>
-                </div>
-                <div className="py-12 lg:py-14 px-4 lg:w-1/2 w-full order-1 lg:order-1">
-                    <img
-                        src="/images/feature-1.svg"
-                        alt=""
-                        className="w-full max-w-none"
-                    />
-                </div>
-                <div className="py-12 lg:py-14 px-4 lg:pl-12 lg:w-1/2 w-full order-2 lg:order-3">
-                    <h3 className="text-color-1 text-xl lg:text-2xl">
-                        Unified visual graph
-                    </h3>
-                    <p className="mt-5">
-                        Through a web user interface, Marquez can provide a visual map that shows <strong>complex interdependencies</strong> within your data ecosystem.
-                    </p>
-                    <p className="mt-5">
-                        The user interface allows you to browse the metadata within Marquez, making it easy to see the inputs and outputs of each job, trace the lineage of individual datasets, and study performance metrics and execution details.
-                    </p>
-                </div> 
-                <div className="py-12 lg:py-14 px-4 lg:w-1/2 w-full order-3 lg:order-2">
-                    <img
-                        src="/images/screenshot.png"
-                        alt=""
-                        className="w-full max-w-none lg:pr-12"
-                    />
-                </div>
-                <div className="py-12 lg:py-14 px-4 lg:pr-12 lg:w-1/2 w-full order-4 lg:order-4">
-                    <h3 className="text-color-1 text-xl lg:text-2xl">
-                        Flexible Lineage API
-                    </h3>
-                    <p className="mt-5">
-                        Lineage metadata can be queried using the lineage API, allowing for automation of key tasks like backfills and root cause analysis.
-                    </p>
-                    <p className="mt-5">
-                        With the Lineage API, you can easily traverse the dependency tree and establish context for datasets across multiple pipelines and orchestration platforms. This can be used to enrich data catalogs and data quality systems.
-                    </p>
-                </div>
-                <div className="py-12 lg:py-14 px-4 lg:w-1/2 w-full order-5 lg:order-5">
-                    <img
-                        src="/images/feature-3.svg"
-                        alt=""
-                        className="w-full max-w-none"
-                    />
-                </div>
+        <div className="flex flex-wrap py-12 container mx-auto items-center">
+            <div className="lg:py-14 px-4 lg:pr-12 lg:w-1/2 w-full order-0 lg:order-0">
+                <h3 className="text-color-1 text-xl lg:text-2xl">
+                    Real-time metadata collection
+                </h3>
+                <p className="mt-5">
+                    Marquez is a metadata server, offering an OpenLineage-compatible endpoint for real-time collection of information from running jobs and applications.
+                </p>
+                <p className="mt-5">
+                    As the reference implementation of OpenLineage, the Marquez API server already works with all of its integrations developed by the community. This includes Apache Airflow, Apache Spark, dbt, Dagster, and Great Expectations. 
+                </p>
+            </div>
+            <div className="py-12 lg:py-14 px-4 lg:w-1/2 w-full order-1 lg:order-1">
+                <img
+                    src="/images/feature-1.svg"
+                    alt=""
+                    className="w-full max-w-none"
+                />
+            </div>
+            <div className="py-12 lg:py-14 px-4 lg:pl-12 lg:w-1/2 w-full order-2 lg:order-3">
+                <h3 className="text-color-1 text-xl lg:text-2xl">
+                    Unified visual graph
+                </h3>
+                <p className="mt-5">
+                    Through a web user interface, Marquez can provide a visual map that shows <strong>complex interdependencies</strong> within your data ecosystem.
+                </p>
+                <p className="mt-5">
+                    The user interface allows you to browse the metadata within Marquez, making it easy to see the inputs and outputs of each job, trace the lineage of individual datasets, and study performance metrics and execution details.
+                </p>
+            </div> 
+            <div className="py-12 lg:py-14 px-4 lg:w-1/2 w-full order-3 lg:order-2">
+                <img
+                    src="/images/screenshot.png"
+                    alt=""
+                    className="w-full max-w-none lg:pr-12"
+                />
+            </div>
+            <div className="py-12 lg:py-14 px-4 lg:pr-12 lg:w-1/2 w-full order-4 lg:order-4">
+                <h3 className="text-color-1 text-xl lg:text-2xl">
+                    Flexible Lineage API
+                </h3>
+                <p className="mt-5">
+                    Lineage metadata can be queried using the lineage API, allowing for automation of key tasks like backfills and root cause analysis.
+                </p>
+                <p className="mt-5">
+                    With the Lineage API, you can easily traverse the dependency tree and establish context for datasets across multiple pipelines and orchestration platforms. This can be used to enrich data catalogs and data quality systems.
+                </p>
+            </div>
+            <div className="py-12 lg:py-14 px-4 lg:w-1/2 w-full order-5 lg:order-5">
+                <img
+                    src="/images/feature-3.svg"
+                    alt=""
+                    className="w-full max-w-none"
+                />
             </div>
         </div>
     )
