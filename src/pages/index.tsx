@@ -69,8 +69,8 @@ const Wall = ({ data }) => {
 
 const About = ({ }) => {
     return (
-        <div className="boxed">
-            <div className="px-4 py-12 text-center lg:py-14 lg:px-0">
+        <div className="border-t-2 border-dashed border-color-2" >
+            <div className="px-4 py-12 boxed text-center lg:py-14 lg:px-0">
                 <p className="mt-5 text-lg pt-3 px-6">
                     Marquez is an open source metadata service. It maintains <a href="https://en.wikipedia.org/wiki/Provenance#Data_provenance">data provenance</a>, shows how datasets are consumed and produced, provides global visibility into job runtimes, centralizes dataset lifecycle management, and much more.
                 </p>
@@ -141,7 +141,7 @@ const FeatureBoxes = ({ }) => {
                 </div> 
                 <div className="py-12 lg:py-14 px-4 lg:w-1/2 w-full order-3 lg:order-2">
                     <img
-                        src="/images/feature-2.svg"
+                        src="/images/screenshot.png"
                         alt=""
                         className="w-full max-w-none lg:pr-12"
                     />
