@@ -2,7 +2,7 @@ const siteMetadata = {
     title: `Marquez`,
     siteUrl: `https://marquezproject.ai`,
     capitalizeTitleOnHome: false,
-    logo: `/images/logo.svg`,
+    logo: `/images/logo-lfai.svg`,
     icon: `/images/icon.svg`,
     titleImage: ``,
     ogImage: `/images/cover.jpg`,

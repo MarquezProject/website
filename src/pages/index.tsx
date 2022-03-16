@@ -69,14 +69,14 @@ const Wall = ({ data }) => {
                     />
                     <Button
                         title="GitHub"
-                        to='https://github.com/OpenLineage/OpenLineage'
+                        to='https://github.com/MarquezProject/marquez'
                         type="extbutton"
                         iconRight={<GitHub />}
                         className="mx-5 rounded-full"
                     />
                     <Button
                         title="Slack"
-                        to='http://bit.ly/OpenLineageSlack'
+                        to='http://bit.ly/MarquezSlack'
                         type="extbutton"
                         iconRight={<Slack />}
                         className="mx-5 rounded-full"
@@ -86,26 +86,6 @@ const Wall = ({ data }) => {
         </div>
     )
 }
-
-const About = ({ }) => {
-    return (
-        <div className="border-t-2 border-dashed border-color-2" >
-            <div className="px-4 py-12 boxed text-center lg:py-14 lg:px-0">
-                <h2 className="text-2xl relative lg:text-3xl">
-                    <span>What is Marquez?</span>
-                </h2>
-
-                <p className="mt-5 text-lg pt-3 px-6">
-                    Marquez is an open source metadata service. It maintains <a href="https://en.wikipedia.org/wiki/Provenance#Data_provenance">data provenance</a>, shows how datasets are consumed and produced, provides global visibility into job runtimes, centralizes dataset lifecycle management, and much more.
-                </p>
-                <p className="mt-5 text-lg px-6">
-                    Marquez was released and open sourced by <a href="https://www.wework.com">WeWork</a>.
-                </p>
-            </div>
-        </div>
-    )
-}
-
 
 const FeatureBoxes = ({ }) => {
     return (

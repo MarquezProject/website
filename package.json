@@ -1,7 +1,7 @@
 {
-  "name": "openlineage-website",
+  "name": "marquez-website",
   "private": true,
-  "description": "The website for OpenLineage.io",
+  "description": "The website for the Marquez Project",
   "version": "3.0.0",
   "license": "MIT",
   "scripts": {
