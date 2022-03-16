@@ -30,10 +30,10 @@ const siteMetadata = {
             name: "Resources",
             url: "/resources",
         },
-        {
-            name: "Blog",
-            url: "/blog",
-        },
+        // {
+        //     name: "Blog",
+        //     url: "/blog",
+        // },
     ],
     footerLinks: [
         {

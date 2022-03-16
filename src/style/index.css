@@ -112,12 +112,12 @@ p {
 }
 
 .btn-primary {
-    @apply bg-secondary my-4;
+    @apply bg-color-3 my-4;
     color: #000;
 }
 
 .btn-primary:before {
-    @apply bg-secondary;
+    @apply bg-color-3;
 }
 
 .btn-primary:hover:before,.btn-primary:focus:before {
