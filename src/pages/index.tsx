@@ -30,6 +30,7 @@ export default ({ data, location }: PageProps<IndexPageQuery>) => {
             location={location}
         >
             <Wall data={siteData} />
+            <About />
             <FeatureBoxes />
             {/* <Blog>{blogList}</Blog> */}
         </Layout>
@@ -87,22 +88,33 @@ const Wall = ({ data }) => {
     )
 }
 
-const FeatureBoxes = ({ }) => {
+const About = ({ }) => {
     return (
         <div className="border-t-2 border-dashed border-color-2" >
-            <div className="px-4 pt-12 boxed text-center lg:pt-14 lg:px-0">
-                <h2 className="text-2xl relative lg:text-3xl">
-                    <span>What is Marquez?</span>
+            <div className="px-4 py-12 boxed text-center lg:pt-14 lg:px-0">
+                <h2 className="relative text-3xl">
+                    What is Marquez?
                 </h2>
-                <p className="mt-5 text-lg pt-3 px-6">
+                <p className="mt-5  pt-3 px-6">
                     Marquez is an open source metadata service. It maintains <a href="https://en.wikipedia.org/wiki/Provenance#Data_provenance">data provenance</a>, shows how datasets are consumed and produced, provides global visibility into job runtimes, centralizes dataset lifecycle management, and much more.
                 </p>
-                <p className="mt-5 text-lg px-6">
+                <p className="my-5 text-lg px-6">
                     Marquez was released and open sourced by <a href="https://www.wework.com">WeWork</a>.
                 </p>
             </div>
+        </div> 
+    )
+}
 
+const FeatureBoxes = ({ }) => {
+    return (
+        <div className="border-t-2 border-dashed border-color-2" >
             <div className="flex flex-wrap py-12 container mx-auto items-center">
+                <div className="px-4 text-center lg:px-0 w-full order-0 lg:order-0">
+                    <h2 className="relative text-3xl">
+                        What does Marquez do?
+                    </h2>
+                </div>
                 <div className="lg:py-14 px-4 lg:pr-12 lg:w-1/2 w-full order-0 lg:order-0">
                     <h3 className="text-color-1 text-xl text-center lg:text-left lg:text-2xl">
                         Real-time metadata collection
