@@ -69,17 +69,17 @@ To view lineage metadata collected by Marquez, browse to the UI by visiting [htt
 
 ## View Job Metadata
 
-You should see the job `namespace`, `name`, `input` and `output` datasets, and the job run marked as `COMPLETED`: 
+You should see the job `namespace`, `name`, the query, and a tab containing its run history: 
 
-![](tab-view-job-completed.png)
+![](tab-view-job-metadata.png)
 
-## View Input Dataset Metadata
+## View Dataset Metadata
 
 Finally, click on the output dataset `public.delivery_7_days` for `etl_delivery_7_days`. You should see the dataset `name`, `schema`, and `description`:
 
-![](tab-view-dataset-output.png)
+![](tab-view-dataset-metadata.png)
 
-# Collect Metadata using OpenLineage
+# Collecting Live Metadata
 
 To collect _run-level_ metadata as [OpenLineage](https://github.com/OpenLineage/OpenLineage) events using Marquez as the [HTTP backend](https://github.com/OpenLineage/OpenLineage#scope), see the OpenLineage [getting started](https://openlineage.io/getting-started) guide!
 
