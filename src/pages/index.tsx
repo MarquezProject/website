@@ -54,7 +54,7 @@ const Wall = ({ data }) => {
             <div className="flex-1 text-center p-3 relative z-10 lg:text-left lg:pl-8 text-white lg:text-color-default">
                 <div className="title">
                     <h1 className="text-5xl relative mt-20 lg:text-6xl">
-                        <span>Data Lineage For Every Pipeline</span>
+                        <span>Data Lineage for <nobr>Every Pipeline</nobr></span>
                     </h1>
                 </div>
                 <p className="text-lg lg:text-xl text-color-3 pb-6 pt-3 pb-6">
@@ -164,7 +164,7 @@ const FeatureBoxes = ({ }) => {
                 </div>
                 <div className="py-12 lg:py-14 px-4 lg:w-1/2 w-full order-5 lg:order-5">
                     <img
-                        src="/images/feature-3.svg"
+                        src="/images/api-terminal.png"
                         alt=""
                         className="w-full max-w-none"
                     />
