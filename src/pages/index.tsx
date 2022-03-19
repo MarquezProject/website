@@ -54,7 +54,7 @@ const Wall = ({ data }) => {
             <div className="flex-1 text-center p-3 relative z-10 lg:text-left lg:pl-8 text-white lg:text-color-default">
                 <div className="title">
                     <h1 className="text-5xl relative mt-20 lg:text-6xl">
-                        <span>Data Lineage for <nobr>Every Pipeline</nobr></span>
+                        Data lineage for <span className="nowrap">every pipeline</span>
                     </h1>
                 </div>
                 <p className="text-lg lg:text-xl text-color-3 pb-6 pt-3 pb-6">
@@ -66,21 +66,21 @@ const Wall = ({ data }) => {
                         to='/quickstart'
                         type="link"
                         iconRight={<ArrowRight />}
-                        className="mx-5 rounded-full"
+                        className="mx-5 rounded-full opacity-80 hover:opacity-100 transition duration-500 ease-in-out transform hover:scale-105"
                     />
                     <Button
                         title="GitHub"
                         to='https://github.com/MarquezProject/marquez'
                         type="extbutton"
                         iconRight={<GitHub />}
-                        className="mx-5 rounded-full"
+                        className="mx-5 rounded-full opacity-80 hover:opacity-100 transition duration-500 ease-in-out transform hover:scale-105"
                     />
                     <Button
                         title="Slack"
                         to='http://bit.ly/MarquezSlack'
                         type="extbutton"
                         iconRight={<Slack />}
-                        className="mx-5 rounded-full"
+                        className="mx-5 rounded-full opacity-80 hover:opacity-100 transition duration-500 ease-in-out transform hover:scale-105"
                     />
                 </div>
             </div>

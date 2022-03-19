@@ -90,15 +90,6 @@ p {
     @apply relative z-10;
 }
 
-.btn:before{
-    content: "";
-    @apply absolute w-full h-full top-0;
-    left: 100%;
-    transition: left 0.25s;
-    transition-timing-function: cubic-bezier(1, 2.13, 1, -0.1);
-    z-index: 1;
-}
-
 .btn .icon-right {
     @apply ml-3;
 }
@@ -108,7 +99,7 @@ p {
 }
 
 .btn:focus {
-    @apply outline-none;
+    @apply outline-none bg-color-2;
 }
 
 .btn-primary {
@@ -122,36 +113,6 @@ p {
 
 .btn-primary:hover:before,.btn-primary:focus:before {
     left: 0;
-}
-
-.integration-item .image {
-    clip-path: polygon(0 0, 0% 0, 0% 100%, 0% 100%);
-    transition: clip-path 0.50s;
-    transition-timing-function: ease-in-out;
-    z-index: 3;
-    transform: translateY(0);
-}
-
-.integration-item.even .image {
-    clip-path: polygon(100% 0, 100% 0, 100% 99%, 100% 100%);
-}
-
-
-.integration-item.begin-animation .image{
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.integration-item .to-up {
-    transform: translate(0, 50px);
-    transition: transform 0.25s;
-}
-
-.integration-item .to-up:nth-child(2){
-    transition-delay: 0.2s;
-}
-
-.integration-item.begin-animation .to-up {
-    transform: translate(0, 0px);
 }
 
 .footer-links li{
@@ -362,4 +323,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .blog-item {
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nowrap {
+    white-space: nowrap;
 }

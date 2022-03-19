@@ -25,7 +25,7 @@ export default function() {
     ))
 
     return (
-        <footer className="footer py-12">
+        <footer className="border-t-2 border-dashed border-color-2 footer py-12">
             <div className="container mx-auto text-center">
                 <div
                     className="text-color-1 my-3"
