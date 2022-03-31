@@ -7,11 +7,11 @@ template: basepage
 
 Marquez enables highly flexible [data lineage](https://en.wikipedia.org/wiki/Data_lineage) queries across _all datasets_, while reliably and efficiently associating (_upstream_, _downstream_) dependencies between jobs and the datasets they produce and consume.
 
-![](lineage.png)
+![](metadata-lineage.svg)
 
 ## Why manage and utilize metadata?
 
-![](ecosystem.png)
+![](metadata-why.svg)
 
 ## Design
 
@@ -37,15 +37,15 @@ Marquez's data model emphasizes immutability and timely processing of datasets. 
 
 The diagram below shows the metadata collected and cataloged for a given job over multiple runs, and the time-ordered sequence of changes applied to its input dataset.
 
-![](versioning.png)
+![](metadata-versioning.svg)
 
-**Job**: A job has an `owner`, unique `name`, `version`, and optional `description`. A job will define one or more _versioned_ inputs as dependencies, and one or more _versioned_ outputs as artifacts. Note that it's possible for a job to have only input, or only output datasets defined.
+`Job:` A job has an `owner`, unique `name`, `version`, and optional `description`. A job will define one or more _versioned_ inputs as dependencies, and one or more _versioned_ outputs as artifacts. Note that it's possible for a job to have only input, or only output datasets defined.
 
-**Job Version:** A read-only _immutable_ `version` of a job, with a unique referenceable `link` to code preserving the reproducibility of builds from source. A job version associates one or more input and output datasets to a job definition (important for lineage information as data moves through various jobs over time). Such associations catalog provenance links and provide powerful visualizations of the flow of data.
+`Job Version:` A read-only _immutable_ `version` of a job, with a unique referenceable `link` to code preserving the reproducibility of builds from source. A job version associates one or more input and output datasets to a job definition (important for lineage information as data moves through various jobs over time). Such associations catalog provenance links and provide powerful visualizations of the flow of data.
 
-**Dataset:** A dataset has an `owner`, unique `name`, `schema`, `version`, and optional `description`. A dataset is contained within a datasource. A `datasource` enables the grouping of physical datasets to their physical source. A version `pointer` into the historical set of changes is present for each dataset and maintained by Marquez. When a dataset change is committed back to Marquez, a distinct version ID is generated, stored, then set to `current` with the pointer updated internally.
+`Dataset:` A dataset has an `owner`, unique `name`, `schema`, `version`, and optional `description`. A dataset is contained within a datasource. A `datasource` enables the grouping of physical datasets to their physical source. A version `pointer` into the historical set of changes is present for each dataset and maintained by Marquez. When a dataset change is committed back to Marquez, a distinct version ID is generated, stored, then set to `current` with the pointer updated internally.
 
-**Dataset Version:** A read-only _immutable_ `version` of a dataset. Each version can be read independently and has a unique ID mapped to a dataset change preserving its state at some given point in time. The _latest_ version ID is updated only when a change to the dataset has been recorded. To compute a distinct version ID, Marquez applies a versioning function to a set of properties corresponding to the datasets underlying datasource.
+`Dataset Version:` A read-only _immutable_ `version` of a dataset. Each version can be read independently and has a unique ID mapped to a dataset change preserving its state at some given point in time. The _latest_ version ID is updated only when a change to the dataset has been recorded. To compute a distinct version ID, Marquez applies a versioning function to a set of properties corresponding to the datasets underlying datasource.
 
 ## Deployment
 
