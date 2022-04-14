@@ -99,7 +99,7 @@ const About = ({ }) => {
                     Marquez is an open source metadata service. It maintains <a href="https://en.wikipedia.org/wiki/Provenance#Data_provenance">data provenance</a>, shows how datasets are consumed and produced, provides global visibility into job runtimes, centralizes dataset lifecycle management, and much more.
                 </p>
                 <p className="my-5 text-lg px-6">
-                    Marquez was released and open sourced by <a href="https://www.wework.com">WeWork</a>.
+                    Marquez was released and open sourced by <strong><a href="https://www.wework.com">WeWork</a></strong>.
                 </p>
             </div>
         </div> 
