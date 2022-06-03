@@ -74,9 +74,13 @@ const plugins = [
         },
       },
     {
-        resolve: `gatsby-plugin-google-analytics`,
+        resolve: `gatsby-plugin-google-gtag`,
         options: {
-          trackingId: "G-9S43L0BB9X",
+          trackingIds: [
+            "G-9S43L0BB9X",
+          ],
+        },
+        pluginConfig: {
           head: true,
         },
     },
