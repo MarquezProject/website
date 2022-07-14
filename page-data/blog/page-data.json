@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-blog-list-tsx",
     "path": "/blog",
-    "result": {"data":{"allMdx":{"edges":[{"node":{"id":"ff6757bb-cb71-5ce4-bbcb-e6ae2daa8483","frontmatter":{"title":"Exploring the Marquez Lineage API","author":"Michael Robinson","description":"How to use the API behind Marquez to explore datasets, jobs, and lineage","date":"14 July 2021","image":{"publicURL":"/static/bdc2df28a236acb68ab34aea26f4b568/image.svg","childImageSharp":null}},"fields":{"slug":"/blog/api-blog-post/"}}}]}},"pageContext":{"limit":10,"skip":0,"numPages":1,"currentPage":1}},
+    "result": {"data":{"allMdx":{"edges":[{"node":{"id":"7a1de5c6-baff-5b7e-8daf-4fe7d7889f19","frontmatter":{"title":"Exploring the Marquez Lineage API","author":"Michael Robinson","description":"How to use the API behind Marquez to explore datasets, jobs, and lineage","date":"14 July 2021","image":{"publicURL":"/static/bdc2df28a236acb68ab34aea26f4b568/image.svg","childImageSharp":null}},"fields":{"slug":"/blog/using-the-marquez-api/"}}}]}},"pageContext":{"limit":10,"skip":0,"numPages":1,"currentPage":1}},
     "staticQueryHashes": ["1139857438","1946588481","2083862410","2213455283","2418326273","3067102388"]}
