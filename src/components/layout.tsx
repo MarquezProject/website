@@ -103,6 +103,7 @@ const Head = ({ data }) => {
                 href={data.site.siteMetadata.icon}
                 type="image/png"
             />
+            <script defer data-domain="marquezproject.ai" src="https://plausible.io/js/script.outbound-links.js"></script>
             <link
                 href="https://fonts.googleapis.com/css2?family=Karla&amp;display=swap"
                 rel="stylesheet"
