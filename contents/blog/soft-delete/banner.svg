@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 770 125" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" fill="#464646" height="690" width="920" y="-79.65" x="-66.51" class="cls-1"/>
+  <path id="svg_2" fill="rgba(239,239,239,.5)" d="m-6.71,148.05l78.2,556.6l-701.5,-729.1l623.3,172.5z" class="cls-2"/>
+  <path id="svg_3" fill="rgba(190,190,190,.5)" d="m-66.51,145.75l-78.2,-202.4l581.9,-2.3l-503.7,204.7z" class="cls-5"/>
+  <path id="svg_4" d="m485.49,-35.95l-179.4,36.8l126.5,416.3l52.9,-453.1z"/>
+  <path id="svg_5" d="m140.49,79.05l-80.5,119.6l-92,-62.1l172.5,-57.5z"/>
+  <path id="svg_6" fill="rgba(144,144,144,.5)" d="m759.19,-116.45l-94.3,717.6l177.1,2.3l-82.8,-719.9z" class="cls-4"/>
+  <path id="svg_7" d="m598.19,173.35l108.1,-370.3l-218.5,161l110.4,209.3z"/>
+  <path id="svg_8" fill="rgba(119,119,119,.5)" d="m292.29,69.85l-39.1,218.5l133.4,-43.7l-94.3,-174.8z" class="cls-7"/>
+  <path id="svg_9" d="m128.99,62.95l52.9,105.8l149.5,-149.5l-202.4,43.7z"/>
+  <path id="svg_10" fill="rgba(120,120,120,.5)" d="m-43.51,92.85l101.2,683.1l2.3,-508.3l-103.5,-174.8z" class="cls-8"/>
+  <path id="svg_11" d="m694.79,315.95l-78.2,-216.2l87.4,-25.3l-9.2,241.5z"/>
+  <path id="svg_12" fill="rgba(158,158,158,.5)" d="m126.69,-104.95l124.2,154.1l57.5,-149.5l-181.7,-4.6z" class="cls-3"/>
+  <path id="svg_13" fill="rgba(108,184,195,.5)" d="m467.09,217.05l-4.6,-253l-184,75.9l188.6,177.1z" class="cls-6"/>
+ </g>
+</svg>
