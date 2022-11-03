@@ -27,6 +27,10 @@ const siteMetadata = {
             url: "/quickstart",
         },
         {
+            name: "FAQ",
+            url: "/resources/faq",
+        },
+        {
             name: "Resources",
             url: "/resources",
         },
