@@ -38,9 +38,9 @@ minimizes downtime during the migration.
 As the 
 [migration plan](https://github.com/MarquezProject/marquez/blob/main/api/src/main/resources/marquez/db/migration/V57__readme.md) 
 says, users whose `lineage_events` tables have up to 100K rows can set it and 
-forget it -- no further action is required. A standard Flyway migration will 
-fill the newly created tables automatically. Be advised that a brief downtime 
-may occur while the migration takes place. 
+forget it -- no extra work is required beyond upgrading and restarting 
+Marquez, but be prepared for a brief downtime while a standard Flyway migration 
+fills the newly created tables automatically.
 
 For heavy users whose `lineage_events` tables have more than 100K rows, a 
 different process will be used. Instead of a standard migration, the process will 
