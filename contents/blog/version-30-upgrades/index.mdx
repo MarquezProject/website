@@ -19,8 +19,8 @@ Along with these long-awaited UI upgrades come some significant performance
 improvements to the API. In prior versions of Marquez, accessing OpenLineage 
 facets required direct queries against the OpenLineage events table, which could 
 be quite costly depending on the size of this table. Some users have events 
-tables with more than 100K rows. To address this performance issue, Marquez 30.0 
-has new tables for dataset, job and run facets.
+tables with more than 100K rows -- millions of rows, in fact. To address this 
+performance issue, Marquez 30.0 has new tables for dataset, job and run facets.
 
 So far, so simple, right? Protecting against data loss and ensuring a smooth 
 experience for users was not so simple, in fact. We needed a way to migrate the 
