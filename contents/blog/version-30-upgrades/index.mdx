@@ -1,16 +1,16 @@
 ---
-title: Marquez 30.0 offers a big performance bump, with some assembly required
-date: 2023-02-02
+title: Marquez 0.30.0 offers a big performance bump, with some assembly required
+date: 2023-02-03
 author: Michael Robinson
 image: ./image.svg
 banner: ./banner.svg
 description: How to ensure a smooth transition to the latest version of Marquez. 
 ---
 
-## Marquez 30.0
+## Marquez 0.30.0
 
-[Marquez 30.0](https://github.com/MarquezProject/marquez/releases/tag/0.30.0), 
-which we released on January 31, contains some exciting new features, including 
+[Marquez 0.30.0](https://github.com/MarquezProject/marquez/releases/tag/0.30.0), 
+which we released on 2023-01-31, contains some exciting new features, including 
 [column-level lineage](https://github.com/MarquezProject/marquez/pull/2293) and 
 a [soft delete option](https://github.com/MarquezProject/marquez/pull/2343) in 
 the UI.
@@ -51,11 +51,13 @@ results during the migration, especially if the output is based on facets.
 To perform a migration, these users must run the following command:
 
 ```
-java -jar api/build/libs/marquez-api-0.30.0-SNAPSHOT.jar db-migrate --version v57 ./marquez.yml
+java -jar api/build/libs/marquez-api-0.30.0.jar db-migrate --version v57 ./marquez.yml
 ```
 
-The command will process the data in chunks, storing a state with information 
-about the chunks being processed. Consequently,
+Available command arguments, `version` and `chunkSize`, allow the user to specify 
+the migration version to apply and the number of lineage events to process. 
+The command will process the data not in its entirety but in chunks, storing a 
+state with information about the chunks being processed. Consequently,
 
 - it can be stopped any time
 - it will continue automatically and process the remaining chunks. 
@@ -64,17 +66,17 @@ The default chunk size, 10,000, refers to the number of `lineage_events`
 processed in a single query. The chunk size may be adjusted via command parameter:
 
 ```
-java -jar api/build/libs/marquez-api-0.30.0-SNAPSHOT.jar db-migrate --version v57 --chunkSize 50000 ./marquez.yml
+java -jar api/build/libs/marquez-api-0.30.0.jar db-migrate --version v57 --chunkSize 50000 ./marquez.yml
 ```
 
 ## More Information
 
 For more details about what, if anything, you will need to do to ensure a smooth 
-transition to Marquez 30.0, check out the helpful
+transition to Marquez 0.30.0, check out the helpful
 [migration plan](https://github.com/MarquezProject/marquez/blob/main/api/src/main/resources/marquez/db/migration/V57__readme.md) 
 put together by [Willy](https://github.com/wslulciuc) and 
 [Pawel](https://github.com/pawel-big-lebowski). 
 
-For more information about the improvements and additions in Marquez 30.0, check 
+For more information about the improvements and additions in Marquez 0.30.0, check 
 out [the release on GitHub](https://github.com/MarquezProject/marquez/releases/tag/0.30.0).
 
