@@ -54,16 +54,16 @@ To perform a migration, these users must run the following command:
 java -jar api/build/libs/marquez-api-0.30.0.jar db-migrate --version v57 ./marquez.yml
 ```
 
-Available command arguments, `version` and `chunkSize`, allow the user to specify 
-the migration version to apply and the number of lineage events to process. 
-The command will process the data not in its entirety but in chunks, storing a 
-state with information about the chunks being processed. Consequently,
+Available command arguments, `version` (required) and `chunkSize` (optional), 
+allow the user to specify the migration version to apply and the number of 
+lineage events to process (the default being 10,000). The command will process 
+the data not in its entirety but in chunks, storing a state with information 
+about the chunks being processed. Consequently,
 
 - it can be stopped any time
 - it will continue automatically and process the remaining chunks. 
 
-The default chunk size, 10,000, refers to the number of `lineage_events` 
-processed in a single query. The chunk size may be adjusted via command parameter:
+A sample command specifying version 57 and 50,000 events:
 
 ```
 java -jar api/build/libs/marquez-api-0.30.0.jar db-migrate --version v57 --chunkSize 50000 ./marquez.yml

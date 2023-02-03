@@ -9,9 +9,9 @@ gatsby develop
 ```
 
 Marquez green:
-RGB: 113-221-191
-CMYK: 49-0-14-13
+RGB: 113-221-191\
+CMYK: 49-0-14-13\
 HEX: #71DDBF
 
-Blog image: 600 x 245
+Blog image: 600 x 245\
 Blog banner: 770 x 125
