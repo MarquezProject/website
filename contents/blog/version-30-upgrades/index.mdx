@@ -20,7 +20,7 @@ improvements to the API. In prior versions of Marquez, accessing OpenLineage
 facets required direct queries against the OpenLineage events table, which could 
 be quite costly depending on the size of this table. Some users have events 
 tables with more than 100K rows -- millions of rows, in fact. To address this 
-performance issue, Marquez 30.0 has new tables for dataset, job and run facets.
+performance issue, Marquez 0.30.0 has new tables for dataset, job and run facets.
 
 So far, so simple, right? Protecting against data loss and ensuring a smooth 
 experience for users was not so simple, in fact. We needed a way to migrate the 
@@ -48,7 +48,7 @@ happen asynchronously so that the user can start the API and consume new
 OpenLineage events as usual. Note that some API calls might return irrelevant 
 results during the migration, especially if the output is based on facets.
 
-To perform a migration, these users must run the following command:
+To perform a migration, these users must run a new `db-migrate` command:
 
 ```
 java -jar api/build/libs/marquez-api-0.30.0.jar db-migrate --version v57 ./marquez.yml
