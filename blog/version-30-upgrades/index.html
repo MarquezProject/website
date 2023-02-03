@@ -9,7 +9,7 @@ improvements to the API. In prior versions of Marquez, accessing OpenLineage
 facets required direct queries against the OpenLineage events table, which could
 be quite costly depending on the size of this table. Some users have events
 tables with more than 100K rows -- millions of rows, in fact. To address this
-performance issue, Marquez 30.0 has new tables for dataset, job and run facets.</p><p>So far, so simple, right? Protecting against data loss and ensuring a smooth
+performance issue, Marquez 0.30.0 has new tables for dataset, job and run facets.</p><p>So far, so simple, right? Protecting against data loss and ensuring a smooth
 experience for users was not so simple, in fact. We needed a way to migrate the
 data while not only avoiding loss but also keeping downtime to a minimum. The
 solution that <a href="https://github.com/wslulciuc">Willy</a> and
@@ -27,7 +27,7 @@ fills the newly created tables automatically.</p><p>For heavy users whose <code>
 different process will be used. Instead of a standard migration, the process will
 happen asynchronously so that the user can start the API and consume new
 OpenLineage events as usual. Note that some API calls might return irrelevant
-results during the migration, especially if the output is based on facets.</p><p>To perform a migration, these users must run the following command:</p><deckgo-highlight-code terminal="carbon">
+results during the migration, especially if the output is based on facets.</p><p>To perform a migration, these users must run a new <code>db-migrate</code> command:</p><deckgo-highlight-code terminal="carbon">
           <code slot="code">java -jar api/build/libs/marquez-api-0.30.0.jar db-migrate --version v57 ./marquez.yml</code>
         </deckgo-highlight-code><p>Available command arguments, <code>version</code> (required) and <code>chunkSize</code> (optional),
 allow the user to specify the migration version to apply and the number of
