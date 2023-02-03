@@ -29,11 +29,11 @@ happen asynchronously so that the user can start the API and consume new
 OpenLineage events as usual. Note that some API calls might return irrelevant
 results during the migration, especially if the output is based on facets.</p><p>To perform a migration, these users must run the following command:</p><deckgo-highlight-code terminal="carbon">
           <code slot="code">java -jar api/build/libs/marquez-api-0.30.0.jar db-migrate --version v57 ./marquez.yml</code>
-        </deckgo-highlight-code><p>Available command arguments, <code>version</code> and <code>chunkSize</code>, allow the user to specify
-the migration version to apply and the number of lineage events to process.
-The command will process the data not in its entirety but in chunks, storing a
-state with information about the chunks being processed. Consequently,</p><ul><li>it can be stopped any time</li><li>it will continue automatically and process the remaining chunks. </li></ul><p>The default chunk size, 10,000, refers to the number of <code>lineage_events</code>
-processed in a single query. The chunk size may be adjusted via command parameter:</p><deckgo-highlight-code terminal="carbon">
+        </deckgo-highlight-code><p>Available command arguments, <code>version</code> (required) and <code>chunkSize</code> (optional),
+allow the user to specify the migration version to apply and the number of
+lineage events to process (the default being 10,000). The command will process
+the data not in its entirety but in chunks, storing a state with information
+about the chunks being processed. Consequently,</p><ul><li>it can be stopped any time</li><li>it will continue automatically and process the remaining chunks. </li></ul><p>A sample command specifying version 57 and 50,000 events:</p><deckgo-highlight-code terminal="carbon">
           <code slot="code">java -jar api/build/libs/marquez-api-0.30.0.jar db-migrate --version v57 --chunkSize 50000 ./marquez.yml</code>
         </deckgo-highlight-code><h2 id="more-information">More Information</h2><p>For more details about what, if anything, you will need to do to ensure a smooth
 transition to Marquez 0.30.0, check out the helpful
