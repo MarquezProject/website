@@ -26,8 +26,8 @@ Marquez, but be prepared for a brief downtime while a standard Flyway migration
 fills the newly created tables automatically.</p><p>For heavy users whose <code>lineage_events</code> tables have more than 100K rows, a
 different process will be used. Instead of a standard migration, the process will
 happen asynchronously so that the user can start the API and consume new
-OpenLineage events as usual. Note that some API calls might return irrelevant
-results during the migration, especially if the output is based on facets.</p><p>To perform a migration, these users must run a new <code>db-migrate</code> command:</p><deckgo-highlight-code terminal="carbon">
+OpenLineage events as usual. Note that some API calls might return results
+slowly during the migration, especially if the output is based on facets.</p><p>To perform a migration, these users must run a new <code>db-migrate</code> command:</p><deckgo-highlight-code terminal="carbon">
           <code slot="code">java -jar api/build/libs/marquez-api-0.30.0.jar db-migrate --version v57 ./marquez.yml</code>
         </deckgo-highlight-code><p>Available command arguments, <code>version</code> (required) and <code>chunkSize</code> (optional),
 allow the user to specify the migration version to apply and the number of
