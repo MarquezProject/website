@@ -45,8 +45,8 @@ fills the newly created tables automatically.
 For heavy users whose `lineage_events` tables have more than 100K rows, a 
 different process will be used. Instead of a standard migration, the process will 
 happen asynchronously so that the user can start the API and consume new 
-OpenLineage events as usual. Note that some API calls might return irrelevant 
-results during the migration, especially if the output is based on facets.
+OpenLineage events as usual. Note that some API calls might return results
+slowly during the migration, especially if the output is based on facets.
 
 To perform a migration, these users must run a new `db-migrate` command:
 
