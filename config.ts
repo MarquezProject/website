@@ -60,6 +60,16 @@ const siteMetadata = {
             url: "https://github.com/MarquezProject/marquez",
             rel: "",
         },
+        {
+            name: "Wiki",
+            url: "https://bit.ly/MarquezMeet",
+            rel: ""
+        },
+        {
+            name: "YouTube",
+            url: "https://bit.ly/MarquezYouTube",
+            rel: ""
+        }
     ],
 }
 
