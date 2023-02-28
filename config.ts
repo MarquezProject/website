@@ -41,16 +41,24 @@ const siteMetadata = {
     ],
     footerLinks: [
         {
+            name: "Mastodon",
+            url: "https://fosstodon.org/@marquez",
+            rel: "me",
+        },
+        {
             name: "Twitter",
             url: "https://twitter.com/MarquezProject",
+            rel: "",
         },
         {
             name: "Slack",
             url: "https://bit.ly/MarquezSlack",
+            rel: "",
         },
         {
             name: "GitHub",
             url: "https://github.com/MarquezProject/marquez",
+            rel: "",
         },
     ],
 }
