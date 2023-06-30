@@ -77,7 +77,7 @@ const Wall = ({ data }) => {
                     />
                     <Button
                         title="Slack"
-                        to='http://bit.ly/MarquezSlack'
+                        to='https://bit.ly/MqzSlackInvite'
                         type="extbutton"
                         iconRight={<Slack />}
                         className="mx-5 rounded-full opacity-80 hover:opacity-100 transition duration-500 ease-in-out transform hover:scale-105"
