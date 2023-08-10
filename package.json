@@ -19,7 +19,7 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "apollo": "^2.33.6",
-    "gatsby": "^3.15.0",
+    "gatsby": "^3.14.1",
     "gatsby-core-utils": "^2.15.0",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-codegen": "^3.0.1",
