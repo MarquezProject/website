@@ -2222,30 +2222,6 @@
               "deprecationReason": null
             },
             {
-              "name": "port",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "Int",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "host",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
               "name": "polyfill",
               "description": null,
               "args": [],
@@ -6156,7 +6132,7 @@
               "deprecationReason": null
             },
             {
-              "name": "layout",
+              "name": "template",
               "description": null,
               "args": [],
               "type": {
@@ -6168,7 +6144,7 @@
               "deprecationReason": null
             },
             {
-              "name": "template",
+              "name": "layout",
               "description": null,
               "args": [],
               "type": {
@@ -7608,26 +7584,6 @@
                   "type": {
                     "kind": "INPUT_OBJECT",
                     "name": "SiteSiteMetadataFilterInput",
-                    "ofType": null
-                  },
-                  "defaultValue": null
-                },
-                {
-                  "name": "port",
-                  "description": null,
-                  "type": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "IntQueryOperatorInput",
-                    "ofType": null
-                  },
-                  "defaultValue": null
-                },
-                {
-                  "name": "host",
-                  "description": null,
-                  "type": {
-                    "kind": "INPUT_OBJECT",
-                    "name": "StringQueryOperatorInput",
                     "ofType": null
                   },
                   "defaultValue": null
@@ -10286,7 +10242,7 @@
               "defaultValue": null
             },
             {
-              "name": "layout",
+              "name": "template",
               "description": null,
               "type": {
                 "kind": "INPUT_OBJECT",
@@ -10296,7 +10252,7 @@
               "defaultValue": null
             },
             {
-              "name": "template",
+              "name": "layout",
               "description": null,
               "type": {
                 "kind": "INPUT_OBJECT",
@@ -12862,13 +12818,13 @@
               "deprecationReason": null
             },
             {
-              "name": "childrenMdx___frontmatter___layout",
+              "name": "childrenMdx___frontmatter___template",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "childrenMdx___frontmatter___template",
+              "name": "childrenMdx___frontmatter___layout",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -13684,13 +13640,13 @@
               "deprecationReason": null
             },
             {
-              "name": "childMdx___frontmatter___layout",
+              "name": "childMdx___frontmatter___template",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "childMdx___frontmatter___template",
+              "name": "childMdx___frontmatter___layout",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -17419,18 +17375,6 @@
               "deprecationReason": null
             },
             {
-              "name": "port",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "host",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
               "name": "polyfill",
               "description": null,
               "isDeprecated": false,
@@ -18281,26 +18225,6 @@
               "type": {
                 "kind": "INPUT_OBJECT",
                 "name": "SiteSiteMetadataFilterInput",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "port",
-              "description": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "IntQueryOperatorInput",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
-              "name": "host",
-              "description": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "StringQueryOperatorInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -27707,13 +27631,13 @@
               "deprecationReason": null
             },
             {
-              "name": "frontmatter___layout",
+              "name": "frontmatter___template",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "frontmatter___template",
+              "name": "frontmatter___layout",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
