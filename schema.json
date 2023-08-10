@@ -6156,7 +6156,7 @@
               "deprecationReason": null
             },
             {
-              "name": "template",
+              "name": "layout",
               "description": null,
               "args": [],
               "type": {
@@ -6168,7 +6168,7 @@
               "deprecationReason": null
             },
             {
-              "name": "layout",
+              "name": "template",
               "description": null,
               "args": [],
               "type": {
@@ -10286,7 +10286,7 @@
               "defaultValue": null
             },
             {
-              "name": "template",
+              "name": "layout",
               "description": null,
               "type": {
                 "kind": "INPUT_OBJECT",
@@ -10296,7 +10296,7 @@
               "defaultValue": null
             },
             {
-              "name": "layout",
+              "name": "template",
               "description": null,
               "type": {
                 "kind": "INPUT_OBJECT",
@@ -12862,13 +12862,13 @@
               "deprecationReason": null
             },
             {
-              "name": "childrenMdx___frontmatter___template",
+              "name": "childrenMdx___frontmatter___layout",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "childrenMdx___frontmatter___layout",
+              "name": "childrenMdx___frontmatter___template",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -13684,13 +13684,13 @@
               "deprecationReason": null
             },
             {
-              "name": "childMdx___frontmatter___template",
+              "name": "childMdx___frontmatter___layout",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "childMdx___frontmatter___layout",
+              "name": "childMdx___frontmatter___template",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -27707,13 +27707,13 @@
               "deprecationReason": null
             },
             {
-              "name": "frontmatter___template",
+              "name": "frontmatter___layout",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
             },
             {
-              "name": "frontmatter___layout",
+              "name": "frontmatter___template",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
