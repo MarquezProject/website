@@ -84,6 +84,9 @@ const plugins = [
           head: true,
         },
     },
+    {
+        resolve: `gatsby-plugin-csp`,
+    },
 ]
 
 export default {

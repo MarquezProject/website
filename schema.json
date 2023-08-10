@@ -3502,17 +3502,13 @@
               "deprecationReason": null
             },
             {
-              "name": "postCssPlugins",
+              "name": "JSFrontmatterEngine",
               "description": null,
               "args": [],
               "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "OBJECT",
-                  "name": "SitePluginPluginOptionsPostCssPlugins",
-                  "ofType": null
-                }
+                "kind": "SCALAR",
+                "name": "Boolean",
+                "ofType": null
               },
               "isDeprecated": false,
               "deprecationReason": null
@@ -3541,6 +3537,22 @@
                 "kind": "SCALAR",
                 "name": "Boolean",
                 "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "postCssPlugins",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "SitePluginPluginOptionsPostCssPlugins",
+                  "ofType": null
+                }
               },
               "isDeprecated": false,
               "deprecationReason": null
@@ -4836,7 +4848,7 @@
                 },
                 {
                   "name": "placeholder",
-                  "description": "Format of generated placeholder image, displayed while the main image loads.\nBLURRED: a blurred, low resolution image, encoded as a base64 data URI (default)\nDOMINANT_COLOR: a solid color, calculated from the dominant color of the image.\nTRACED_SVG: a low-resolution traced SVG of the image.\nNONE: no placeholder. Set \"background\" to use a fixed background color.",
+                  "description": "Format of generated placeholder image, displayed while the main image loads.\nBLURRED: a blurred, low resolution image, encoded as a base64 data URI\nDOMINANT_COLOR: a solid color, calculated from the dominant color of the image (default).\nTRACED_SVG: deprecated. Will use DOMINANT_COLOR.\nNONE: no placeholder. Set \"background\" to use a fixed background color.",
                   "type": {
                     "kind": "ENUM",
                     "name": "ImagePlaceholder",
@@ -20084,11 +20096,11 @@
               "defaultValue": null
             },
             {
-              "name": "postCssPlugins",
+              "name": "JSFrontmatterEngine",
               "description": null,
               "type": {
                 "kind": "INPUT_OBJECT",
-                "name": "SitePluginPluginOptionsPostCssPluginsFilterListInput",
+                "name": "BooleanQueryOperatorInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -20109,6 +20121,16 @@
               "type": {
                 "kind": "INPUT_OBJECT",
                 "name": "BooleanQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "postCssPlugins",
+              "description": null,
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "SitePluginPluginOptionsPostCssPluginsFilterListInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -21459,13 +21481,7 @@
               "deprecationReason": null
             },
             {
-              "name": "pluginCreator___pluginOptions___postCssPlugins",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "pluginCreator___pluginOptions___postCssPlugins___postcssPlugin",
+              "name": "pluginCreator___pluginOptions___JSFrontmatterEngine",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -21478,6 +21494,18 @@
             },
             {
               "name": "pluginCreator___pluginOptions___pathCheck",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginCreator___pluginOptions___postCssPlugins",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginCreator___pluginOptions___postCssPlugins___postcssPlugin",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -22743,13 +22771,7 @@
               "deprecationReason": null
             },
             {
-              "name": "pluginOptions___postCssPlugins",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "pluginOptions___postCssPlugins___postcssPlugin",
+              "name": "pluginOptions___JSFrontmatterEngine",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -22762,6 +22784,18 @@
             },
             {
               "name": "pluginOptions___pathCheck",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginOptions___postCssPlugins",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginOptions___postCssPlugins___postcssPlugin",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
