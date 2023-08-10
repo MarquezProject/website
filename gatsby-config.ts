@@ -84,6 +84,24 @@ const plugins = [
           head: true,
         },
     },
+    {
+        resolve: `gatsby-plugin-csp`,
+        options: {
+          disableOnDev: false,
+          reportOnly: false,
+          mergeScriptHashes: true,
+          mergeStyleHashes: false,
+          mergeDefaultDirectives: true,
+          directives: {
+            "script-src": "https: 'unsafe-eval'",
+            "script-src-elem": "'self' 'unsafe-inline' https://plausible.io/js/script.outbound-links.js",
+            "style-src": "'self' 'unsafe-inline'",
+            "style-src-elem": "'self' 'unsafe-inline' https://fonts.googleapis.com",
+            "font-src": "'self' data: https://fonts.gstatic.com/s/karla/v30/qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqaHUlKZbLXGhmRytc.woff2 https://fonts.gstatic.com/s/karla/v30/qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqaE0lKZbLXGhmR.woff2",
+            "img-src": "*"
+          }
+        }
+    },
 ]
 
 export default {
