@@ -1208,7 +1208,7 @@
   resolved "https://registry.yarnpkg.com/@babel/regjsgen/-/regjsgen-0.8.0.tgz#f0ba69b075e1f05fb2825b7fad991e7adbb18310"
   integrity sha512-x/rqGMdzj+fWZvCOYForTghzbtqPDZ5gPwaoNGHdgDfF2QA/XZbCBp4Moo5scrkAMPhB7z26XM/AaHuIJdgauA==
 
-"@babel/runtime@^7.10.0", "@babel/runtime@^7.14.6", "@babel/runtime@^7.15.4", "@babel/runtime@^7.20.7", "@babel/runtime@^7.21.0", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.14.6", "@babel/runtime@^7.15.4", "@babel/runtime@^7.20.7", "@babel/runtime@^7.21.0", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.22.10"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.22.10.tgz#ae3e9631fd947cb7e3610d3e9d8fef5f76696682"
   integrity sha512-21t/fkKLMZI4pqP2wlmsQAWnYW1PDyKyyUV4vCi+B25ydmdaYTKXPwCj0BzSUnZf4seIiYvSA3jcZ3gdsMFkLQ==
@@ -6418,6 +6418,14 @@ gatsby-plugin-codegen@^3.0.1:
   dependencies:
     apollo "^2.33.4"
     lodash.mergewith "^4.6.2"
+
+gatsby-plugin-csp@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-csp/-/gatsby-plugin-csp-1.1.4.tgz#f93901ae8c0bdf262c1e0dc26940e52f6bdfbff7"
+  integrity sha512-aMDN27QAbHcI/3F5sH9J3w4wE0vNWWKTxGXjQ4VsKVVbIfxnPNXf82i9nOp4Ef2MQT4bIKnfZjf9jaLG3aWXcQ==
+  dependencies:
+    "@babel/runtime" "^7.0.0"
+    lodash.flatten "^4.4.0"
 
 gatsby-plugin-google-gtag@^4.15.0:
   version "4.25.0"
