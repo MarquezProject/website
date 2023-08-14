@@ -328,3 +328,143 @@ h1, h2, h3, h4, h5, h6 {
 .nowrap {
     white-space: nowrap;
 }
+
+/* Wall */
+
+.wall {
+    @apply flex relative justify-center items-center overflow-hidden pt-24 px-16;
+}
+
+.wall-div {
+    @apply flex-1 lg:block relative w-full h-full top-0 left-0 hidden;
+}
+
+.wall-img-div {
+    @apply w-full h-full;
+}
+
+.wall-img {
+    @apply h-full w-auto max-w-none lg:h-auto lg:w-full pr-12;
+}
+
+.wall-text {
+    @apply flex-1 text-center p-3 relative z-10 lg:text-left lg:pl-8 text-white lg:text-color-default;
+}
+
+.wall-text-slogan {
+    @apply text-5xl relative mt-20 lg:text-6xl;
+}
+
+.wall-text-cta {
+    @apply text-lg lg:text-xl text-color-3 pb-6 pt-3 pb-6;
+}
+
+.wall-text-btns-div {
+    @apply py-5 pb-20;
+}
+
+.wall-text-btn {
+    @apply mx-5 rounded-full opacity-80 hover:opacity-100 transition duration-500 ease-in-out transform hover:scale-105;
+}
+
+/* About */
+
+.about-div {
+    @apply border-t-2 border-dashed border-color-2;
+}
+
+.about-div-inner {
+    @apply px-4 py-12 boxed text-center lg:pt-14 lg:px-0;
+}
+
+.about-div-q {
+    @apply relative text-3xl;
+}
+
+.about-div-a1 {
+    @apply mt-5 pt-3 px-6;
+}
+
+.about-div-a2 {
+    @apply my-5 text-lg px-6;
+}
+
+/* Feature Boxes */
+
+.feature-boxes-div {
+    @apply border-t-2 border-dashed border-color-2
+}
+
+.feature-boxes-div-inner {
+    @apply flex flex-wrap py-12 container mx-auto items-center;
+}
+
+.feature-boxes-div-title {
+    @apply px-4 text-center lg:px-0 w-full lg:order-1 order-1;
+}
+
+.feature-boxes-div-title-h2 {
+    @apply text-center relative text-3xl;
+}
+
+.feature-boxes-div-rtm {
+    @apply lg:py-14 px-4 lg:pr-12 lg:w-1/2 w-full order-2 lg:order-2;
+}
+
+.feature-boxes-div-title {
+    @apply text-color-1 text-xl text-center lg:text-left lg:text-2xl;
+}
+
+.feature-boxes-div-para {
+    @apply mt-5 text-center lg:text-left;
+}
+
+.feature-boxes-div-rtm-img {
+    @apply py-12 lg:py-14 px-4 lg:w-1/2 w-full order-2 lg:order-2;
+}
+
+.fb-img {
+    @apply w-full max-w-none;
+}
+
+.feature-boxes-div-uvg {
+    @apply py-12 lg:py-14 px-4 lg:pl-12 lg:w-1/2 w-full order-3 lg:order-4;
+}
+
+.feature-boxes-div-uvg-img {
+    @apply py-12 lg:py-14 px-4 lg:w-1/2 w-full order-4 lg:order-3;
+}
+
+.uvg-img {
+    @apply w-full max-w-none lg:pr-12;
+}
+
+.feature-boxes-div-api {
+    @apply py-12 lg:py-14 px-4 lg:pr-12 lg:w-1/2 w-full order-5 lg:order-5;
+}
+
+.feature-boxes-div-api-img {
+    @apply py-12 lg:py-14 px-4 lg:w-1/2 w-full order-6 lg:order-6;
+}
+
+/* Blog */
+
+.blog-div {
+    @apply border-t-2 border-dashed border-color-2;
+}
+
+.blog-div-inner {
+    @apply container mx-auto px-0 pb-24;
+}
+
+.blog-div-title-div {
+    @apply px-4 py-12 text-center lg:py-14 lg:px-0;
+}
+
+.blog-div-title {
+    @apply text-color-1 text-3xl lg:text-4xl;
+}
+
+.blog-div-children {
+    @apply flex flex-wrap;
+}
