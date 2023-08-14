@@ -468,3 +468,29 @@ h1, h2, h3, h4, h5, h6 {
 .blog-div-children {
     @apply flex flex-wrap;
 }
+
+/* 404 */
+
+.not-found-div {
+    @apply container mx-auto py-12;
+}
+
+.not-found-title-div {
+    @apply title py-12 text-center;
+}
+
+.not-found-title {
+    @apply text-7xl text-color-1;
+}
+
+.not-found-title-text {
+    @apply text-primary;
+}
+
+.not-found-msg {
+    @apply pb-20 text-center;
+}
+
+.not-found-btn {
+    @apply text-link;
+}

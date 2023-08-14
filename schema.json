@@ -2222,6 +2222,30 @@
               "deprecationReason": null
             },
             {
+              "name": "port",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "host",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "polyfill",
               "description": null,
               "args": [],
@@ -7739,6 +7763,26 @@
                   "type": {
                     "kind": "INPUT_OBJECT",
                     "name": "SiteSiteMetadataFilterInput",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "port",
+                  "description": null,
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "IntQueryOperatorInput",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "host",
+                  "description": null,
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "StringQueryOperatorInput",
                     "ofType": null
                   },
                   "defaultValue": null
@@ -17530,6 +17574,18 @@
               "deprecationReason": null
             },
             {
+              "name": "port",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "host",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "polyfill",
               "description": null,
               "isDeprecated": false,
@@ -18380,6 +18436,26 @@
               "type": {
                 "kind": "INPUT_OBJECT",
                 "name": "SiteSiteMetadataFilterInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "port",
+              "description": null,
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "IntQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "host",
+              "description": null,
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
                 "ofType": null
               },
               "defaultValue": null
