@@ -329,7 +329,7 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
 }
 
-/* Wall */
+/* Index Wall */
 
 .wall {
     @apply flex relative justify-center items-center overflow-hidden pt-24 px-16;
@@ -367,7 +367,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply mx-5 rounded-full opacity-80 hover:opacity-100 transition duration-500 ease-in-out transform hover:scale-105;
 }
 
-/* About */
+/* Index About */
 
 .about-div {
     @apply border-t-2 border-dashed border-color-2;
@@ -389,7 +389,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply my-5 text-lg px-6;
 }
 
-/* Feature Boxes */
+/* Index Feature Boxes */
 
 .feature-boxes-div {
     @apply border-t-2 border-dashed border-color-2
@@ -447,7 +447,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply py-12 lg:py-14 px-4 lg:w-1/2 w-full order-6 lg:order-6;
 }
 
-/* Blog */
+/* Blog on Index */
 
 .blog-div {
     @apply border-t-2 border-dashed border-color-2;
@@ -493,4 +493,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .not-found-btn {
     @apply text-link;
+}
+
+/* Cookie */
+
+.cookie-div {
+    @apply fixed bottom-0 left-0 w-full bg-bgalt border-t-2 border-primary p-4 flex flex-wrap items-center justify-between z-50;
+}
+
+.cookie-inner-div {
+    @apply flex;
+}
+
+.cookie-p {
+    @apply text-color-default mr-2;
+}
+
+.cookie-link {
+    @apply text-color-1;
+}
+
+.cookie-btn {
+    @apply px-3 py-1 rounded bg-bgalt border-2 border-secondary text-color-default hover:border-primary duration-200 transition-all;
 }
