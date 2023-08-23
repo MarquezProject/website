@@ -580,3 +580,21 @@ h1, h2, h3, h4, h5, h6 {
 .layout-navbar-inner-div {
     @apply text-color-default bg-bg;
 }
+
+/* Navigation-list */
+
+.navigation-list-btn {
+    @apply text-color-1 transition-transform duration-200 transform top-0 left-0;
+}
+
+.navigation-list-btn-theme {
+    @apply scale-100;
+}
+
+.navigation-list-btn-no-theme {
+    @apply scale-0 absolute;
+}
+
+.navigation-list-link {
+    @apply text-color-1 focus:text-primary;
+}
