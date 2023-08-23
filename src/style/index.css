@@ -321,10 +321,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.5rem;
 }
 
-.blog-item {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
 .nowrap {
     white-space: nowrap;
 }
@@ -543,4 +539,38 @@ h1, h2, h3, h4, h5, h6 {
 
 .footerlink-list {
     @apply inline-block mx-3 animated-link-parent;
+}
+
+/* Item-blog */
+
+.blog-item {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.item-blog-div {
+    @apply blog-item w-full md:w-1/2 lg:w-1/3 p-4;
+}
+
+.item-blog-frontmatter-outer-div {
+    @apply p-4 py-3;
+}
+
+.item-blog-frontmatter-title {
+    @apply text-color-1 text-3xl pt-1;
+}
+
+.item-blog-frontmatter-inner-div {
+    @apply flex items-center text-secondary;
+}
+
+.item-blog-frontmatter-calendar {
+    @apply stroke-current;
+}
+
+.item-blog-frontmatter-author-title {
+    @apply pl-2 text-color-default font-sans;
+}
+
+.item-blog-frontmatter-description {
+    @apply pt-3 text-color-default;
 }
