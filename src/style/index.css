@@ -574,3 +574,9 @@ h1, h2, h3, h4, h5, h6 {
 .item-blog-frontmatter-description {
     @apply pt-3 text-color-default;
 }
+
+/* Layout */
+
+.layout-navbar-inner-div {
+    @apply text-color-default bg-bg;
+}
