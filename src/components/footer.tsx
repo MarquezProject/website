@@ -26,16 +26,16 @@ export default function() {
     ))
 
     return (
-        <footer className="border-t-2 border-dashed border-color-2 footer py-12">
-            <div className="container mx-auto text-center">
+        <footer className="footer-outer-div">
+            <div className="footer-inner-div">
                 <div
-                    className="text-color-1 my-3"
+                    className="footerlinks"
                 >
                     <ul>
                     {footerLinks} 
                     </ul>
                 </div>
-                <p className="text-color-default text-lg">
+                <p className="footer-copyright">
                     Copyright &copy; {new Date().getFullYear()} The Linux Foundation<sup>®</sup>. All rights reserved.      
                 </p>
             </div>
@@ -45,7 +45,7 @@ export default function() {
 
 const ListItem: React.FC<{ data: FooterLinksQuery_site_siteMetadata_footerLinks }> = ({ data }) => {
     return (
-        <li className="inline-block mx-3 animated-link-parent">
+        <li className="footerlink-list">
             <Link to={data.url} title={data.name} rel={data.rel}>
                 <span>{data.name}</span>
             </Link>
