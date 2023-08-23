@@ -516,3 +516,9 @@ h1, h2, h3, h4, h5, h6 {
 .cookie-btn {
     @apply px-3 py-1 rounded bg-bgalt border-2 border-secondary text-color-default hover:border-primary duration-200 transition-all;
 }
+
+/* Shortcodes */
+
+.shortcodes {
+    @apply flex-1 p-2;
+}
