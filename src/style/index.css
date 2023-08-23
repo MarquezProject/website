@@ -598,3 +598,77 @@ h1, h2, h3, h4, h5, h6 {
 .navigation-list-link {
     @apply text-color-1 focus:text-primary;
 }
+
+/* Navigation */
+
+.navigation-outer-div {
+    @apply duration-300 transition-all flex justify-center lg:justify-between items-center z-20 fixed w-full nav;
+}
+
+.navigation-outer-div-scrolled {
+    @apply scrolled bg-bg p-4;
+}
+
+.navigation-outer-div-unscrolled {
+    @apply p-5;
+}
+
+.navigation-btn {
+    @apply absolute text-primary lg:hidden;
+}
+
+.navigation-sidebar-outer-div {
+    @apply bg-bg h-full flex flex-col justify-center relative;
+}
+
+.navigation-sidebar-inner-div-1 {
+    @apply absolute top-0 my-4 text-center w-full;
+}
+
+.navigation-sidebar-link {
+    @apply inline-block;
+}
+
+.navigation-sidebar-link-logo {
+    @apply duration-300 transition-all;
+}
+
+.navigation-sidebar-link-logo-scrolled {
+    @apply h-8;
+}
+
+.navigation-sidebar-link-logo-unscrolled {
+    @apply h-12;
+}
+
+.navigation-sidebar-inner-div-2 {
+    @apply text-center;
+}
+
+.navigation-sidebar-inner-div-2-list {
+    @apply block my-2;
+}
+
+.navigation-link-logo {
+    @apply duration-300 transition-all;
+}
+
+.navigation-link-logo-scrolled {
+    @apply h-8;
+}
+
+.navigation-link-logo-unscrolled {
+    @apply h-12;
+}
+
+.navigation-inner-div-1 {
+    @apply hidden lg:block;
+}
+
+.navigation-navbar {
+    @apply nav-links flex;
+}
+
+.navigation-inner-div-2 {
+    @apply absolute line h-px left-0 bottom-0 bg-gradient-primary;
+}
