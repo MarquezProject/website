@@ -443,7 +443,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply py-12 lg:py-14 px-4 lg:w-1/2 w-full order-6 lg:order-6;
 }
 
-/* Blog on Index */
+/* Index Blog Posts */
 
 .blog-div {
     @apply border-t-2 border-dashed border-color-2;
@@ -698,32 +698,41 @@ h1, h2, h3, h4, h5, h6 {
 /* Sidebar */
 
 .r-swipe-sidebar-container {
-    position: "absolute"
+    @apply absolute;
 }
 
 .r-swipe-sidebar {
-    position: "fixed";
-    left: "`${this.state.progress-100}%`";
-    width: "this.settings.sidebarWidth";
-    height: "100%";
-    top: "0";
-    zIndex: "9999";
-    transitionProperty: "left";
-    transitionDuration: "this.state.transitionTime+"s"";
-    transitionTimingFunction: "linear";
-    transform: "translate3d(0,0,0)"
+ 
 }
 
 .r-swipe-sidebar-overlay {
-    position: "fixed";
-    top: 0;
-    bottom: 0;
-    left: "this.state.progress === 0 ? "-100%" : "0%"";
-    width: "100%";
-    height: "100%";
-    background: "#000";
-    zIndex: 9998;
-    transitionProperty: "opacity";
-    transitionDuration: "0s";
-    opacity: "`${this.state.progress/200}`"
+   
 }
+
+/* UI */
+
+.ui-input {
+    @apply block w-full outline-none px-4 py-2 focus:outline-none bg-bg text-color-default;
+}
+
+.ui-textarea {
+    @apply block w-full outline-none resize-none px-4 py-2 focus:outline-none bg-bg text-color-default;
+}
+
+.ui-input-focused {
+    @apply shadow-2xl;
+}
+
+.ui-input-div {
+    @apply transition-all duration-300 py-3 lg:p-4 pb-6;
+}
+
+.ui-input-div-p {
+    @apply text-color-3;
+}
+
+.ui-input-div-elem {
+    @apply bg-gradient-primary p-2px;
+}
+
+

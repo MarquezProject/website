@@ -196,12 +196,36 @@ export default class SideBar extends React.Component<SideBarProps, SideBarState>
     render(){
         return(
             <div className="r-swipe-sidebar-container">
-                <div className="r-swipe-sidebar" ref={this.sidebarParent}>
+                <div className="r-swipe-sidebar" ref={this.sidebarParent} style={{
+                    position: "fixed",
+                    height: "100%",
+                    top: "0",
+                    left: `${this.state.progress-100}%`,
+                    width: this.settings.sidebarWidth,
+                    zIndex: "9999",
+                    transitionProperty: "left",
+                    transitionDuration: this.state.transitionTime+"s",
+                    transitionTimingFunction: "linear",
+                    transform: "translate3d(0,0,0)"
+                }}>
                     {this.props.children}
                 </div>
                 <div 
                     className="r-swipe-sidebar-overlay"
                     ref={this.sidebarOverlay}
+                    style={{
+                        position: "fixed",
+                        top: 0,
+                        bottom: 0,
+                        left: this.state.progress === 0 ? "-100%" : "0%",
+                        width: "100%",
+                        height: "100%",
+                        background: "#000",
+                        zIndex: 9998,
+                        transitionProperty: "opacity",
+                        transitionDuration: "0s",
+                        opacity: "`${this.state.progress/200}`"
+                    }}
                     role="button"
                     tabIndex={-1}
                     onClick={this.closeSidebar}
