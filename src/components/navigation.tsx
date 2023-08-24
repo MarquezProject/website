@@ -50,7 +50,7 @@ const Navbar: React.FC<NavbarProps> = ({ navPlaceholder, location, currentTheme,
     return (
         <React.Fragment>
             <div
-                className={`navigation-outer-div ${
+                className={`navigation-outer-div nav ${
                     scrolled ? "navigation-outer-div-scrolled" : "navigation-outer-div-unscrolled"
                 }`}
                 ref={navbar}
@@ -79,7 +79,7 @@ const Navbar: React.FC<NavbarProps> = ({ navPlaceholder, location, currentTheme,
                                 />
                             </Link>
                         </div>
-                        <div className=".navigation-sidebar-inner-div-2">
+                        <div className="navigation-sidebar-inner-div-2">
                             <List name="sidebar-nav" current={currentLocation}  currentTheme={currentTheme} switchTheme={switchTheme} themes={themes} withThemeSwitch={allowThemeSwitch} liClassName="navigation-sidebar-inner-div-2-list"/>
                         </div>
                     </div>

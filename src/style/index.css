@@ -602,7 +602,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Navigation */
 
 .navigation-outer-div {
-    @apply duration-300 transition-all flex justify-center lg:justify-between items-center z-20 fixed w-full nav;
+    @apply duration-300 transition-all flex justify-center lg:justify-between items-center z-20 fixed w-full;
 }
 
 .navigation-outer-div-scrolled {
@@ -672,3 +672,26 @@ h1, h2, h3, h4, h5, h6 {
 .navigation-inner-div-2 {
     @apply absolute line h-px left-0 bottom-0 bg-gradient-primary;
 }
+
+/* Pagination */
+
+.pagination-outer-div {
+    @apply mt-8;
+}
+
+.pagination-ul {
+    @apply text-center;
+}
+
+.pagination-li {
+    @apply inline-block align-middle;
+}
+
+.pagination-link {
+    @apply rounded-full bg-bgalt flex items-center justify-center w-12 text-center h-12 m-3 transition-all duration-300 hover:shadow-2xl focus:shadow-2xl;
+}
+
+.pagination-link-active {
+    @apply bg-gradient-primary text-white shadow-2xl;
+}
+
