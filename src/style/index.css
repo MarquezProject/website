@@ -615,6 +615,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .navigation-btn {
     @apply absolute text-primary lg:hidden;
+    transform: "translateY(-50%)";
+    top: "50%";
+    left: "10px";
 }
 
 .navigation-sidebar-outer-div {

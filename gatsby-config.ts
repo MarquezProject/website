@@ -90,15 +90,14 @@ const plugins = [
           disableOnDev: false,
           reportOnly: false,
           mergeScriptHashes: true,
-          mergeStyleHashes: false,
+          mergeStyleHashes: true,
           mergeDefaultDirectives: true,
           directives: {
-            "script-src": "https: 'unsafe-eval'",
-            "script-src-elem": "'self' 'unsafe-inline' https://plausible.io/js/script.outbound-links.js",
-            "style-src": "'self' 'unsafe-inline'",
-            "style-src-elem": "'self' 'unsafe-inline' https://fonts.googleapis.com",
+            "script-src": "'self' 'unsafe-eval' https://plausible.io/js/script.outbound-links.js",
+            "script-src-elem": "'self' https://plausible.io/js/script.outbound-links.js",
+            "style-src": "'self' 'unsafe-hashes' 'sha256-iahNazrr5t3BQXcVfXbYSR8Bd2AOXPifwVTBbIKb/bE=' 'sha256-7buiYDizqbiAS404WOu2AY5NZDzyVesjpBU80D6Nno4=' 'sha256-f7qc12gYVX0xoX9jAoOIxHvtXcfppKYwcBr7sE0GLR4=' 'sha256-o4LYhp5wtluJ8/NWUV2vi+r5AxmP8X2zEvYHCpji+kI=' 'sha256-MtxTLcyxVEJFNLEIqbVTaqR4WWr0+lYSZ78AzGmNsuA=' https://fonts.googleapis.com",
+            "style-src-elem": "'self' 'sha256-27nLLCfJPKzC4cpzFwNqY3YTXYmR0/qs1ExOGhQCw/c=' 'sha256-cLHlYu9WwZQgD1K6YlWPqFYXJEuD9YpxdlDktBDedco=' https://fonts.googleapis.com",
             "font-src": "'self' data: https://fonts.gstatic.com/s/karla/v30/qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqaHUlKZbLXGhmRytc.woff2 https://fonts.gstatic.com/s/karla/v30/qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqaE0lKZbLXGhmR.woff2",
-            "img-src": "*"
           }
         }
     },

@@ -57,11 +57,6 @@ const Navbar: React.FC<NavbarProps> = ({ navPlaceholder, location, currentTheme,
             >
                 <button
                     className="navigation-btn"
-                    style={{
-                        transform: "translateY(-50%)",
-                        top: "50%",
-                        left: "10px",
-                    }}
                     onClick={() => {
                         setSidebarOpen(true)
                     }}
