@@ -195,21 +195,8 @@ export default class SideBar extends React.Component<SideBarProps, SideBarState>
 
     render(){
         return(
-            <div className="r-swipe-sidebar-container" style={{
-                position: "absolute"
-            }}>
-                <div className="r-swipe-sidebar" ref={this.sidebarParent} style={{
-                    position: "fixed",
-                    left: `${this.state.progress-100}%`,
-                    width: this.settings.sidebarWidth,
-                    height: "100%",
-                    top: 0,
-                    zIndex: 9999,
-                    transitionProperty: "left",
-                    transitionDuration: this.state.transitionTime+"s",
-                    transitionTimingFunction: "linear",
-                    transform: "translate3d(0,0,0)"
-                }}>
+            <div className="r-swipe-sidebar-container">
+                <div className="r-swipe-sidebar" ref={this.sidebarParent}>
                     {this.props.children}
                 </div>
                 <div 
@@ -217,25 +204,11 @@ export default class SideBar extends React.Component<SideBarProps, SideBarState>
                     ref={this.sidebarOverlay}
                     role="button"
                     tabIndex={-1}
-                    style={{
-                        position: "fixed",
-                        top: 0,
-                        bottom: 0,
-                        left: this.state.progress === 0 ? "-100%" : "0%",
-                        width: "100%",
-                        height: "100%",
-                        background: "#000",
-                        zIndex: 9998,
-                        transitionProperty: "opacity",
-                        transitionDuration: "0s",
-                        opacity: `${this.state.progress/200}`
-                    }}
                     onClick={this.closeSidebar}
                     onKeyPress={(e) => {
                         if(e.which === 27) this.closeSidebar();
                     }}
                 >
-
                 </div>
             </div>
         )
