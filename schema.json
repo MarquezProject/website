@@ -2222,6 +2222,30 @@
               "deprecationReason": null
             },
             {
+              "name": "port",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "Int",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "host",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "polyfill",
               "description": null,
               "args": [],
@@ -3490,22 +3514,6 @@
               "deprecationReason": null
             },
             {
-              "name": "postCssPlugins",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "LIST",
-                "name": null,
-                "ofType": {
-                  "kind": "OBJECT",
-                  "name": "SitePluginPluginOptionsPostCssPlugins",
-                  "ofType": null
-                }
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
               "name": "trackingIds",
               "description": null,
               "args": [],
@@ -3604,26 +3612,19 @@
               },
               "isDeprecated": false,
               "deprecationReason": null
-            }
-          ],
-          "inputFields": null,
-          "interfaces": [],
-          "enumValues": null,
-          "possibleTypes": null
-        },
-        {
-          "kind": "OBJECT",
-          "name": "SitePluginPluginOptionsPostCssPlugins",
-          "description": null,
-          "fields": [
+            },
             {
-              "name": "postcssPlugin",
+              "name": "postCssPlugins",
               "description": null,
               "args": [],
               "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
+                "kind": "LIST",
+                "name": null,
+                "ofType": {
+                  "kind": "OBJECT",
+                  "name": "SitePluginPluginOptionsPostCssPlugins",
+                  "ofType": null
+                }
               },
               "isDeprecated": false,
               "deprecationReason": null
@@ -3701,6 +3702,29 @@
             },
             {
               "name": "connect_src",
+              "description": null,
+              "args": [],
+              "type": {
+                "kind": "SCALAR",
+                "name": "String",
+                "ofType": null
+              },
+              "isDeprecated": false,
+              "deprecationReason": null
+            }
+          ],
+          "inputFields": null,
+          "interfaces": [],
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "OBJECT",
+          "name": "SitePluginPluginOptionsPostCssPlugins",
+          "description": null,
+          "fields": [
+            {
+              "name": "postcssPlugin",
               "description": null,
               "args": [],
               "type": {
@@ -7739,6 +7763,26 @@
                   "type": {
                     "kind": "INPUT_OBJECT",
                     "name": "SiteSiteMetadataFilterInput",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "port",
+                  "description": null,
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "IntQueryOperatorInput",
+                    "ofType": null
+                  },
+                  "defaultValue": null
+                },
+                {
+                  "name": "host",
+                  "description": null,
+                  "type": {
+                    "kind": "INPUT_OBJECT",
+                    "name": "StringQueryOperatorInput",
                     "ofType": null
                   },
                   "defaultValue": null
@@ -17530,6 +17574,18 @@
               "deprecationReason": null
             },
             {
+              "name": "port",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "host",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
               "name": "polyfill",
               "description": null,
               "isDeprecated": false,
@@ -18380,6 +18436,26 @@
               "type": {
                 "kind": "INPUT_OBJECT",
                 "name": "SiteSiteMetadataFilterInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "port",
+              "description": null,
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "IntQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            },
+            {
+              "name": "host",
+              "description": null,
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -20185,16 +20261,6 @@
               "defaultValue": null
             },
             {
-              "name": "postCssPlugins",
-              "description": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "SitePluginPluginOptionsPostCssPluginsFilterListInput",
-                "ofType": null
-              },
-              "defaultValue": null
-            },
-            {
               "name": "trackingIds",
               "description": null,
               "type": {
@@ -20273,45 +20339,13 @@
                 "ofType": null
               },
               "defaultValue": null
-            }
-          ],
-          "interfaces": null,
-          "enumValues": null,
-          "possibleTypes": null
-        },
-        {
-          "kind": "INPUT_OBJECT",
-          "name": "SitePluginPluginOptionsPostCssPluginsFilterListInput",
-          "description": null,
-          "fields": null,
-          "inputFields": [
+            },
             {
-              "name": "elemMatch",
+              "name": "postCssPlugins",
               "description": null,
               "type": {
                 "kind": "INPUT_OBJECT",
-                "name": "SitePluginPluginOptionsPostCssPluginsFilterInput",
-                "ofType": null
-              },
-              "defaultValue": null
-            }
-          ],
-          "interfaces": null,
-          "enumValues": null,
-          "possibleTypes": null
-        },
-        {
-          "kind": "INPUT_OBJECT",
-          "name": "SitePluginPluginOptionsPostCssPluginsFilterInput",
-          "description": null,
-          "fields": null,
-          "inputFields": [
-            {
-              "name": "postcssPlugin",
-              "description": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "StringQueryOperatorInput",
+                "name": "SitePluginPluginOptionsPostCssPluginsFilterListInput",
                 "ofType": null
               },
               "defaultValue": null
@@ -20379,6 +20413,48 @@
             },
             {
               "name": "connect_src",
+              "description": null,
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "StringQueryOperatorInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "SitePluginPluginOptionsPostCssPluginsFilterListInput",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "elemMatch",
+              "description": null,
+              "type": {
+                "kind": "INPUT_OBJECT",
+                "name": "SitePluginPluginOptionsPostCssPluginsFilterInput",
+                "ofType": null
+              },
+              "defaultValue": null
+            }
+          ],
+          "interfaces": null,
+          "enumValues": null,
+          "possibleTypes": null
+        },
+        {
+          "kind": "INPUT_OBJECT",
+          "name": "SitePluginPluginOptionsPostCssPluginsFilterInput",
+          "description": null,
+          "fields": null,
+          "inputFields": [
+            {
+              "name": "postcssPlugin",
               "description": null,
               "type": {
                 "kind": "INPUT_OBJECT",
@@ -21697,18 +21773,6 @@
               "deprecationReason": null
             },
             {
-              "name": "pluginCreator___pluginOptions___postCssPlugins",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "pluginCreator___pluginOptions___postCssPlugins___postcssPlugin",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
               "name": "pluginCreator___pluginOptions___trackingIds",
               "description": null,
               "isDeprecated": false,
@@ -21782,6 +21846,18 @@
             },
             {
               "name": "pluginCreator___pluginOptions___pathCheck",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginCreator___pluginOptions___postCssPlugins",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginCreator___pluginOptions___postCssPlugins___postcssPlugin",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
@@ -23053,18 +23129,6 @@
               "deprecationReason": null
             },
             {
-              "name": "pluginOptions___postCssPlugins",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "pluginOptions___postCssPlugins___postcssPlugin",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
               "name": "pluginOptions___trackingIds",
               "description": null,
               "isDeprecated": false,
@@ -23138,6 +23202,18 @@
             },
             {
               "name": "pluginOptions___pathCheck",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginOptions___postCssPlugins",
+              "description": null,
+              "isDeprecated": false,
+              "deprecationReason": null
+            },
+            {
+              "name": "pluginOptions___postCssPlugins___postcssPlugin",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null
