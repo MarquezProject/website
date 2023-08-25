@@ -47,7 +47,7 @@ const TextInput = ({ label, type = "text", name, onChange, footer }) => {
         <input
             type={type}
             name={name}
-            className="block w-full outline-none px-4 py-2 focus:outline-none bg-bg text-color-default"
+            className="ui-input"
             onFocus={() => changeFocused(true)}
             onBlur={() => changeFocused(false)}
             onChange={onChange}
@@ -58,12 +58,11 @@ const TextInput = ({ label, type = "text", name, onChange, footer }) => {
     if (type === "textarea") {
         elem = (
             <textarea
-                className="block w-full outline-none resize-none px-4 py-2 focus:outline-none bg-bg text-color-default"
+                className="ui-textarea"
                 name={name}
                 onChange={event => {
                     event.target.style.height = "auto"
                     event.target.style.height = event.target.scrollHeight + "px";
-
                     onChange(event);
                 }}
                 onFocus={() => changeFocused(true)}
@@ -76,11 +75,11 @@ const TextInput = ({ label, type = "text", name, onChange, footer }) => {
     return (
         <div
             className={`${
-                focused ? "input focused shadow-2xl" : ""
-            } transition-all duration-300 py-3 lg:p-4 pb-6`}
+                focused ? "input focused" : ""
+            } ui-input-div`}
         >
-            <p className="text-color-3">{label}</p>
-            <div className="bg-gradient-primary p-2px">
+            <p className="ui-input-div-p">{label}</p>
+            <div className="ui-input-div-elem">
                 {elem}
             </div>
             {footer && 

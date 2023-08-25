@@ -50,18 +50,13 @@ const Navbar: React.FC<NavbarProps> = ({ navPlaceholder, location, currentTheme,
     return (
         <React.Fragment>
             <div
-                className={`duration-300 transition-all flex justify-center lg:justify-between items-center z-20 fixed w-full nav ${
-                    scrolled ? "scrolled bg-bg p-4" : "p-5"
+                className={`navigation-outer-div nav ${
+                    scrolled ? "navigation-outer-div-scrolled" : "navigation-outer-div-unscrolled"
                 }`}
                 ref={navbar}
             >
                 <button
-                    className="absolute text-primary outline-0 lg:hidden"
-                    style={{
-                        transform: "translateY(-50%)",
-                        top: "50%",
-                        left: "10px",
-                    }}
+                    className="navigation-btn"
                     onClick={() => {
                         setSidebarOpen(true)
                     }}
@@ -69,32 +64,32 @@ const Navbar: React.FC<NavbarProps> = ({ navPlaceholder, location, currentTheme,
                     <Menu />
                 </button>
                 <SideBar open={sidebarOpen} onChange={setSidebarOpen}>
-                    <div className="bg-bg h-full flex flex-col justify-center relative">
-                        <div className="absolute top-0 my-4 text-center w-full">
-                            <Link to="/" title={data.site.siteMetadata.title} className="inline-block">
+                    <div className="navigation-sidebar-outer-div">
+                        <div className="navigation-sidebar-inner-div-1">
+                            <Link to="/" title={data.site.siteMetadata.title} className="navigation-sidebar-link">
                                 <Logo
-                                    className={`duration-300 transition-all ${
-                                        scrolled ? "h-8" : "h-12"
+                                    className={`navigation-sidebar-link-logo ${
+                                        scrolled ? "navigation-sidebar-link-logo-scrolled" : "navigation-sidebar-link-logo-unscrolled"
                                     }`}
                                 />
                             </Link>
                         </div>
-                        <div className="text-center">
-                            <List name="sidebar-nav" current={currentLocation}  currentTheme={currentTheme} switchTheme={switchTheme} themes={themes} withThemeSwitch={allowThemeSwitch} liClassName="block my-2"/>
+                        <div className="navigation-sidebar-inner-div-2">
+                            <List name="sidebar-nav" current={currentLocation}  currentTheme={currentTheme} switchTheme={switchTheme} themes={themes} withThemeSwitch={allowThemeSwitch} liClassName="navigation-sidebar-inner-div-2-list"/>
                         </div>
                     </div>
                 </SideBar>
                 <Link to="/" title={data.site.siteMetadata.title}>
                     <Logo
-                        className={`duration-300 transition-all ${
-                            scrolled ? "h-8" : "h-12"
+                        className={`navigation-link-logo ${
+                            scrolled ? "navigation-link-logo-scrolled" : "navigation-link-logo-unscrolled"
                         }`}
                     />
                 </Link>
-                <div className="hidden lg:block">
-                    <List name="navbar" className="nav-links flex" current={currentLocation} currentTheme={currentTheme} switchTheme={switchTheme} themes={themes} withThemeSwitch={allowThemeSwitch}/>
+                <div className="navigation-inner-div-1">
+                    <List name="navbar" className="navigation-navbar" current={currentLocation} currentTheme={currentTheme} switchTheme={switchTheme} themes={themes} withThemeSwitch={allowThemeSwitch}/>
                 </div>
-                <div className="absolute line h-px left-0 bottom-0 bg-gradient-primary"></div>
+                <div className="navigation-inner-div-2"></div>
             </div>
             {navPlaceholder && (
                 <div style={{ height: `${navbarHeight}px` }}></div>

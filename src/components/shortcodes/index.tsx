@@ -10,7 +10,7 @@ const Row = ({ children }) => {
 
 const Col = ({ children }) => {
     return (
-        <div className="flex-1 p-2">
+        <div className="shortcodes">
             {children}
         </div>
     )

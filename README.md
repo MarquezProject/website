@@ -5,8 +5,11 @@ nvm install 16
 npm install -g yarn
 yarn
 yarn global add gatsby-cli
-gatsby develop
+yarn build
+yarn start
 ```
+
+For a production build, use `yarn serve` instead of `yarn start`.
 
 ### Marquez green
 RGB: 113-221-191\

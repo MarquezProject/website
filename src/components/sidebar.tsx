@@ -195,16 +195,14 @@ export default class SideBar extends React.Component<SideBarProps, SideBarState>
 
     render(){
         return(
-            <div className="r-swipe-sidebar-container" style={{
-                position: "absolute"
-            }}>
+            <div className="r-swipe-sidebar-container">
                 <div className="r-swipe-sidebar" ref={this.sidebarParent} style={{
                     position: "fixed",
+                    height: "100%",
+                    top: "0",
                     left: `${this.state.progress-100}%`,
                     width: this.settings.sidebarWidth,
-                    height: "100%",
-                    top: 0,
-                    zIndex: 9999,
+                    zIndex: "9999",
                     transitionProperty: "left",
                     transitionDuration: this.state.transitionTime+"s",
                     transitionTimingFunction: "linear",
@@ -215,8 +213,6 @@ export default class SideBar extends React.Component<SideBarProps, SideBarState>
                 <div 
                     className="r-swipe-sidebar-overlay"
                     ref={this.sidebarOverlay}
-                    role="button"
-                    tabIndex={-1}
                     style={{
                         position: "fixed",
                         top: 0,
@@ -228,14 +224,15 @@ export default class SideBar extends React.Component<SideBarProps, SideBarState>
                         zIndex: 9998,
                         transitionProperty: "opacity",
                         transitionDuration: "0s",
-                        opacity: `${this.state.progress/200}`
+                        opacity: "`${this.state.progress/200}`"
                     }}
+                    role="button"
+                    tabIndex={-1}
                     onClick={this.closeSidebar}
                     onKeyPress={(e) => {
                         if(e.which === 27) this.closeSidebar();
                     }}
                 >
-
                 </div>
             </div>
         )

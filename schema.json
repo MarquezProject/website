@@ -3698,18 +3698,6 @@
               },
               "isDeprecated": false,
               "deprecationReason": null
-            },
-            {
-              "name": "img_src",
-              "description": null,
-              "args": [],
-              "type": {
-                "kind": "SCALAR",
-                "name": "String",
-                "ofType": null
-              },
-              "isDeprecated": false,
-              "deprecationReason": null
             }
           ],
           "inputFields": null,
@@ -20376,16 +20364,6 @@
                 "ofType": null
               },
               "defaultValue": null
-            },
-            {
-              "name": "img_src",
-              "description": null,
-              "type": {
-                "kind": "INPUT_OBJECT",
-                "name": "StringQueryOperatorInput",
-                "ofType": null
-              },
-              "defaultValue": null
             }
           ],
           "interfaces": null,
@@ -21775,12 +21753,6 @@
               "deprecationReason": null
             },
             {
-              "name": "pluginCreator___pluginOptions___directives___img_src",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
               "name": "pluginCreator___pluginOptions___pathCheck",
               "description": null,
               "isDeprecated": false,
@@ -23126,12 +23098,6 @@
             },
             {
               "name": "pluginOptions___directives___font_src",
-              "description": null,
-              "isDeprecated": false,
-              "deprecationReason": null
-            },
-            {
-              "name": "pluginOptions___directives___img_src",
               "description": null,
               "isDeprecated": false,
               "deprecationReason": null

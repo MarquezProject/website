@@ -43,8 +43,8 @@ const List: React.FC<NavigationListProps> = ({
             const next = i !== themes.length - 1 ? i + 1 : 0
             return (
                 <button
-                    className={`text-color-1 transition-transform duration-200 transform top-0 left-0 ${
-                        i === currentTheme ? "scale-100" : "scale-0 absolute"
+                    className={`navigation-list-btn ${
+                        i === currentTheme ? "navigation-list-btn-theme" : "navigation-list-btn-no-theme"
                     }`}
                     title={`Switch to ${themes[next].label}`}
                     key={`${name}-theme-switch-btn-${item.name}`}
@@ -70,7 +70,7 @@ const List: React.FC<NavigationListProps> = ({
 const ListItem = ({ data, active, liClassName }) => {
     return (
         <li className={`${liClassName} ${active ? "active" : ""}`}>
-            <Link to={data.url} title={data.name} className="text-color-1 focus:text-primary">
+            <Link to={data.url} title={data.name} className="navigation-list-link">
                 <span>{data.name}</span>
             </Link>
         </li>

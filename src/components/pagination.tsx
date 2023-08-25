@@ -8,8 +8,8 @@ export default function({ pageContext, type }) {
         
 
         return (
-            <div className="pagination mt-8">
-                <ul className="text-center">
+            <div className="pagination-outer-div">
+                <ul className="pagination-ul">
                     {pageContext.currentPage !== 1 && (
                         <Item type={type} currentPage={pageContext.currentPage} page={pageContext.currentPage-1} icon={<ChevronLeft />} title="Previous Page"/>
                     )}
@@ -35,12 +35,12 @@ const Item: React.FC<ItemProps> = ({ type, currentPage, title, page, icon }) => 
 
     return (
         <li
-            className={`inline-block align-middle`}
+            className={`pagination-li`}
         >
             <Link
                 to={to}
                 title={_title}
-                className={`rounded-full bg-bgalt flex items-center justify-center w-12 text-center h-12 m-3 transition-all duration-300 hover:shadow-2xl focus:shadow-2xl ${active ? "bg-gradient-primary text-white shadow-2xl" : ""}`}
+                className={`pagination-link ${active ? "pagination-link-active" : ""}`}
             >
                 <span>{icon || page}</span>
             </Link>
