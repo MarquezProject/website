@@ -98,7 +98,7 @@ const plugins = [
             "style-src": "'self' 'unsafe-hashes' 'sha256-+94JOX1HQRANuLOsn1gpzNE3I3JLzO0wrP9KspQf0cM=' 'sha256-iahNazrr5t3BQXcVfXbYSR8Bd2AOXPifwVTBbIKb/bE=' 'sha256-7buiYDizqbiAS404WOu2AY5NZDzyVesjpBU80D6Nno4=' 'sha256-f7qc12gYVX0xoX9jAoOIxHvtXcfppKYwcBr7sE0GLR4=' 'sha256-o4LYhp5wtluJ8/NWUV2vi+r5AxmP8X2zEvYHCpji+kI=' 'sha256-MtxTLcyxVEJFNLEIqbVTaqR4WWr0+lYSZ78AzGmNsuA=' https://fonts.googleapis.com",
             "style-src-elem": "'self' 'unsafe-hashes' 'sha256-LuLD83XjKEDeQE2JbDqHgDbq4FVgc43d4S4wUyGCjEs=' 'sha256-mLiecSDCbxU+GwpOjEW11Ddlsg09pqoF9VA2VJ8XAK4=' 'sha256-UrOiXfLZp9TdAD7NY9X+JKYQ8F+C7AsCo9loq6bNNX8=' 'sha256-27nLLCfJPKzC4cpzFwNqY3YTXYmR0/qs1ExOGhQCw/c=' 'sha256-cLHlYu9WwZQgD1K6YlWPqFYXJEuD9YpxdlDktBDedco=' https://fonts.googleapis.com",
             "font-src": "'self' data: https://fonts.gstatic.com/s/karla/v30/qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqaHUlKZbLXGhmRytc.woff2 https://fonts.gstatic.com/s/karla/v30/qkBIXvYC6trAT55ZBi1ueQVIjQTD-JqaE0lKZbLXGhmR.woff2",
-            "connect-src": "'self' https://www.google-analytics.com",
+            "connect-src": "'self' https://www.google-analytics.com https://plausible.io/api/event",
           }
         }
     },
