@@ -14,10 +14,10 @@ export default function basePages({ data, location }: PageProps<BasePagesQuery, 
         }}
         location={location}>
             <div className="boxed">
-                <div className="title px-4 py-12 text-center lg:py-14 lg:px-0">
-                    <h2 className="text-5xl text-color-1">{data.mdx.frontmatter.title}</h2>
+                <div className="basepages-inner-div-1">
+                    <h2>{data.mdx.frontmatter.title}</h2>
                 </div>
-                <div className="post-content px-4 py-12 lg:py-14 lg:px-0">
+                <div className="basepages-inner-div-2">
                     <MDXProvider>
                         <MDXRenderer>{data.mdx.body}</MDXRenderer>
                     </MDXProvider>

@@ -20,29 +20,27 @@ export default function blog({ location, data }: PageProps<BlogQuery, {}>) {
             }}
             location={location}
         >
-            <div className="md:px-4 mt-12 py-6 md:w-11/12 mx-auto">
-                <div className="mx-auto relative">
+            <div className="blog-template-outer-div">
+                <div className="blog-template-inner-div">
                     {data.mdx.frontmatter.banner.publicURL.endsWith('.svg') ?
                     <img src={data.mdx.frontmatter.banner.publicURL} alt="''"/> :
                     <Img fluid={data.mdx.frontmatter.banner.childImageSharp.fluid}/>}
-                    <div className="relative w-full lg:w-3/4 md:w-11/12 sm:w-full p-6 box-border lg:box-content mx-auto bg-bg text-color-default blog-wall-content shadow-xl md:-mt-16 ">
-                        <div className="p-3">
-                            <h1 className="text-5xl font-bold text-primary">
-                                {data.mdx.frontmatter.title}
-                            </h1>
-                            <p className="mt-1 flex">
+                    <div className="blog-template-title-outer-div">
+                        <div className="blog-template-title-inner-div">
+                            <h1>{data.mdx.frontmatter.title}</h1>
+                            <p className="blog-template-calendar">
                                 <Calendar />{" "}
-                                <span className="ml-2">
+                                <span>
                                     {data.mdx.frontmatter.date} by {data.mdx.frontmatter.author}
                                 </span>
                             </p>
-                            <p className="mt-3">
+                            <p className="blog-template-frontmatter">
                                 {data.mdx.frontmatter.description}
                             </p>
                         </div>
                     </div>
                 </div>
-                <div className="lg:w-3/4 md:w-11/12 sm:w-full p-3 mx-auto mt-12 post-content">
+                <div className="blog-template-body">
                     <MDXProvider components={{ Row, Col }}>
                         <MDXRenderer>{data.mdx.body}</MDXRenderer>
                     </MDXProvider>

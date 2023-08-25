@@ -19,9 +19,7 @@ p {
     line-height: 165%;
 }
 
-.boxed {
-    @apply max-w-screen-lg w-full mx-auto px-4;
-}
+
 
 .large-container {
     max-width: 2100px;
@@ -325,7 +323,7 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
 }
 
-/* Index Wall */
+/* Index Page Wall */
 
 .wall {
     @apply flex relative justify-center items-center overflow-hidden pt-24 px-16;
@@ -363,7 +361,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply mx-5 rounded-full opacity-80 hover:opacity-100 transition duration-500 ease-in-out transform hover:scale-105;
 }
 
-/* Index About */
+/* Index Page About */
 
 .about-div {
     @apply border-t-2 border-dashed border-color-2;
@@ -385,7 +383,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply my-5 text-lg px-6;
 }
 
-/* Index Feature Boxes */
+/* Index Page Feature Boxes */
 
 .feature-boxes-div {
     @apply border-t-2 border-dashed border-color-2
@@ -443,7 +441,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply py-12 lg:py-14 px-4 lg:w-1/2 w-full order-6 lg:order-6;
 }
 
-/* Index Blog Posts */
+/* Index Page Blog Posts */
 
 .blog-div {
     @apply border-t-2 border-dashed border-color-2;
@@ -465,7 +463,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply flex flex-wrap;
 }
 
-/* 404 */
+/* 404 Page */
 
 .not-found-div {
     @apply container mx-auto py-12;
@@ -491,7 +489,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply text-link;
 }
 
-/* Cookie */
+/* Cookie Component */
 
 .cookie-div {
     @apply fixed bottom-0 left-0 w-full bg-bgalt border-t-2 border-primary p-4 flex flex-wrap items-center justify-between z-50;
@@ -513,13 +511,13 @@ h1, h2, h3, h4, h5, h6 {
     @apply px-3 py-1 rounded bg-bgalt border-2 border-secondary text-color-default hover:border-primary duration-200 transition-all;
 }
 
-/* Shortcodes */
+/* Shortcodes Component */
 
 .shortcodes {
     @apply flex-1 p-2;
 }
 
-/* Footer */
+/* Footer Component */
 
 .footer-outer-div {
     @apply border-t-2 border-dashed border-color-2 py-12;
@@ -541,7 +539,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply inline-block mx-3 animated-link-parent;
 }
 
-/* Item-blog */
+/* Item-blog Component */
 
 .blog-item {
     background-color: rgba(255, 255, 255, 0.1);
@@ -575,13 +573,13 @@ h1, h2, h3, h4, h5, h6 {
     @apply pt-3 text-color-default;
 }
 
-/* Layout */
+/* Layout Component */
 
 .layout-navbar-inner-div {
     @apply text-color-default bg-bg;
 }
 
-/* Navigation-list */
+/* Navigation-list Component */
 
 .navigation-list-btn {
     @apply text-color-1 transition-transform duration-200 transform top-0 left-0;
@@ -599,7 +597,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply text-color-1 focus:text-primary;
 }
 
-/* Navigation */
+/* Navigation Component */
 
 .navigation-outer-div {
     @apply duration-300 transition-all flex justify-center lg:justify-between items-center z-20 fixed w-full;
@@ -676,7 +674,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply absolute line h-px left-0 bottom-0 bg-gradient-primary;
 }
 
-/* Pagination */
+/* Pagination Component */
 
 .pagination-outer-div {
     @apply mt-8;
@@ -698,7 +696,7 @@ h1, h2, h3, h4, h5, h6 {
     @apply bg-gradient-primary text-white shadow-2xl;
 }
 
-/* Sidebar */
+/* Sidebar Component */
 
 .r-swipe-sidebar-container {
     @apply absolute;
@@ -712,7 +710,7 @@ h1, h2, h3, h4, h5, h6 {
    
 }
 
-/* UI */
+/* UI Component */
 
 .ui-input {
     @apply block w-full outline-none px-4 py-2 focus:outline-none bg-bg text-color-default;
@@ -738,4 +736,76 @@ h1, h2, h3, h4, h5, h6 {
     @apply bg-gradient-primary p-2px;
 }
 
+/* Basepages Template */
 
+.boxed {
+    @apply max-w-screen-lg w-full mx-auto px-4;
+}
+
+.basepages-inner-div-1 {
+    @apply title px-4 py-12 text-center lg:py-14 lg:px-0;
+}
+
+.basepages-inner-div-1 h2 {
+    @apply text-5xl text-color-1;
+}
+
+.basepages-inner-div-2 {
+    @apply post-content px-4 py-12 lg:py-14 lg:px-0;
+}
+
+/* Blog-list Template */
+
+.blog-list-container {
+    @apply container mx-auto py-12;
+}
+
+.blog-list-title-div {
+    @apply title py-12 text-center;
+}
+
+.blog-list-title-div h2 {
+    @apply text-5xl text-color-1;
+}
+
+.blog-list-items-div {
+    @apply flex flex-wrap;
+}
+
+/* Blog Template */
+
+.blog-template-outer-div {
+    @apply md:px-4 mt-12 py-6 md:w-11/12 mx-auto;
+}
+
+.blog-template-inner-div {
+    @apply mx-auto relative;
+}
+
+.blog-template-title-outer-div {
+    @apply relative w-full lg:w-3/4 md:w-11/12 sm:w-full p-6 box-border lg:box-content mx-auto bg-bg text-color-default shadow-xl md:-mt-16;
+}
+
+.blog-template-title-inner-div {
+    @apply p-3;
+}
+
+.blog-template-title-inner-div h1 {
+    @apply text-5xl font-bold text-primary;
+}
+
+.blog-template-calendar {
+    @apply mt-1 flex;
+}
+
+.blog-template-calendar span {
+    @apply ml-2;
+}
+
+.blog-template-frontmatter {
+    @apply mt-3;
+}
+
+.blog-template-body {
+    @apply lg:w-3/4 md:w-11/12 sm:w-full p-3 mx-auto mt-12 post-content;
+}

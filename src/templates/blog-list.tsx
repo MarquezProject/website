@@ -17,13 +17,11 @@ export default function blogList({ data, pageContext, location }: PageProps<Blog
             }}
             location={location}
         >
-            <div className="container mx-auto py-12">
-                <div className="title py-12 text-center">
-                    <h2 className="text-5xl text-color-1">
-                        Blog
-                    </h2>
+            <div className="blog-list-container">
+                <div className="blog-list-title-div">
+                    <h2>Blog</h2>
                 </div>
-                <div className="flex flex-wrap">{blogItems}</div>
+                <div className="blog-list-items-div">{blogItems}</div>
                 <Pagination pageContext={pageContext} type="blog" />
             </div>
         </Layout>
