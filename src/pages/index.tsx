@@ -77,7 +77,7 @@ const Wall = ({ data }) => {
                     />
                     <Button
                         title="Slack"
-                        to='https://bit.ly/MqzSlackInvite'
+                        to='https://bit.ly/Marquez_invite'
                         type="extbutton"
                         iconRight={<Slack />}
                         className="wall-text-btn"

@@ -52,7 +52,7 @@ const siteMetadata = {
         },
         {
             name: "Slack",
-            url: "https://bit.ly/MqzSlack",
+            url: "https://bit.ly/Marquez_invite",
             rel: "",
         },
         {
